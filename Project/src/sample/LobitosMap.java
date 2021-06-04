@@ -7,13 +7,13 @@ import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.Side;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -32,8 +32,9 @@ public class LobitosMap extends Application {
 
         // Create the AmpStart Page grid pane
         GridPane lobitosMapGridPane = createLobitosMapGridPane();
-        lobitosMapGridPane.setStyle("-fx-background-color: #4aa4ef");
-//        ampStartGridPane.setStyle("-fx-background-color: #3596ee");
+//        lobitosMapGridPane.setStyle("-fx-background-color: #4aa4ef");
+        lobitosMapGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+//        lobitosMapGridPane.setStyle("-fx-background-image: " + "url(LobitosMap.png)\n" + "-fx-background-position: center center;");
 
         // Add UI controls to the AmpStart form grid pane
         addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
@@ -45,6 +46,14 @@ public class LobitosMap extends Application {
     }
 
     public static void main(String[] args) { launch(args); }
+
+    private static BackgroundImage createImage(String url) {
+        return new BackgroundImage(
+                new Image(url),
+                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT,
+                new BackgroundPosition(Side.LEFT, 0, true, Side.BOTTOM, 0, true),
+                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, false, true));
+    }
 
     public static GridPane createLobitosMapGridPane() {
         // Set new Grid Pane for LoginPage
