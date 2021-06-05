@@ -6,6 +6,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -16,12 +17,11 @@ public class PiedritasMap extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("SMART MAP - Piedritas Map");
-       /* primaryStage.setWidth(800);
-        primaryStage.setHeight(900);*/
         // Create the AmpStart Page grid pane
         GridPane piedritasMapGridPane = createPiedritasMapGridPane();
-        piedritasMapGridPane.setStyle("-fx-background-color: #4aa4ef");
-//        ampStartGridPane.setStyle("-fx-background-color: #3596ee");
+        piedritasMapGridPane.setMaxSize( 800, 550);
+        piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+
 
         // Add UI controls to the AmpStart form grid pane
         addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
