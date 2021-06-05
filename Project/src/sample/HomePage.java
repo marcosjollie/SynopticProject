@@ -9,6 +9,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
@@ -135,9 +136,12 @@ public class HomePage extends Application {
             public void handle(ActionEvent event) {
                 primaryStage.setTitle("SMART MAP - Lobitos Map");
                 GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
-                lobitosMapGridPane.setStyle("-fx-background-color: #4aa4ef");
+                lobitosMapGridPane.setMaxSize( 800, 550);
+                lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
                 LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
-                Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 500);
+                // Set the scene in AmpStart
+                Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
+                // Display stage
                 primaryStage.setScene(LobitosMapScene);
                 primaryStage.show();
             }

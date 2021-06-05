@@ -138,6 +138,29 @@ public class LobitosMap extends Application {
         lobitosMapGridPane.add(wasteBinsLabel, 1,2);
         lobitosMapGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,305,-30));
 
+
+        // Add Back Button
+        Button backButton = new Button("Back");
+        backButton.setFont(Font.font("Arial", 12));
+        backButton.setPrefSize(70,20);
+        backButton.setDefaultButton(true);
+        lobitosMapGridPane.add(backButton, 0, 10, 1, 1);
+        lobitosMapGridPane.setHalignment(backButton, HPos.LEFT);
+        lobitosMapGridPane.setMargin(backButton, new Insets(0, -5,-127,5));
+
+
+
+
+        backButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Home Page");
+            GridPane homePageGridPane = HomePage.createHomePageGridPane();
+            homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+            HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
+            Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
+            primaryStage.setScene(HomePageScene);
+            primaryStage.show();
+        });
+
     }
 
 
