@@ -91,41 +91,41 @@ public class LobitosMap extends Application {
         // Add WC Button
         Button wcButton = new Button();
         wcButton.setBackground(WCImage);
-        //        wcButton.setGraphic(WCImage);
+        wcButton.setScaleX(0.8);
+        wcButton.setScaleY(0.8);
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         lobitosMapGridPane.add(wcButton, 0, 0);
-//        lobitosMapGridPane.setMargin(wcButton, new Insets(0, -300,510,300));
-        lobitosMapGridPane.setMargin(wcButton, new Insets(0, 35,5,-35));
-
+        lobitosMapGridPane.setMargin(wcButton, new Insets(0, 35,0,-35));
 
         // Add Toilets Label
         Label toiletsLabel = new Label("Public toilets");
-        toiletsLabel.setFont(Font.font("Arial", 15));
+        toiletsLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(toiletsLabel, 1,0);
-//        lobitosMapGridPane.setMargin(toiletsLabel, new Insets(0, -300,505,305));
-        lobitosMapGridPane.setMargin(toiletsLabel, new Insets(0, 35,5,-30));
+        lobitosMapGridPane.setMargin(toiletsLabel, new Insets(0, 35,0,-30));
 
 
         // Add Recycling Button
         Button recyclingButton = new Button();
-//        recyclingButton.setBackground(RecyclingImage);
+        recyclingButton.setScaleX(0.8);
+        recyclingButton.setScaleY(0.8);
         recyclingButton.setBackground(WCImage);
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         lobitosMapGridPane.add(recyclingButton, 0, 1);
-        lobitosMapGridPane.setMargin(recyclingButton, new Insets(0, 35,5,-35));
+        lobitosMapGridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
 
         // Add Recycling Label
         Label recyclingLabel = new Label("Recycling Points");
-        recyclingLabel.setFont(Font.font("Arial", 15));
+        recyclingLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(recyclingLabel, 1,1);
-        lobitosMapGridPane.setMargin(recyclingLabel, new Insets(0, 35,5,-30));
+        lobitosMapGridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
 
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
-//        wasteBinsButton.setBackground(RecyclingImage);
+        wasteBinsButton.setScaleX(0.8);
+        wasteBinsButton.setScaleY(0.8);
         wasteBinsButton.setBackground(WCImage);
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
@@ -134,7 +134,7 @@ public class LobitosMap extends Application {
 
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
-        wasteBinsLabel.setFont(Font.font("Arial", 15));
+        wasteBinsLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(wasteBinsLabel, 1,2);
         lobitosMapGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,305,-30));
 
@@ -149,6 +149,17 @@ public class LobitosMap extends Application {
         lobitosMapGridPane.setMargin(backButton, new Insets(0, -5,-127,5));
 
 
+        wcButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Lobitos Map");
+            GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
+            lobitosWCGridPane.setMaxSize( 800, 550);
+            lobitosWCGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+            LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
+            Scene LobitosWCScene = new Scene(lobitosWCGridPane, 800, 550);
+            primaryStage.setScene(LobitosWCScene);
+            primaryStage.show();
+
+        });
 
 
         backButton.setOnAction(event -> {
