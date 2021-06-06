@@ -21,7 +21,7 @@ public class LobitosMap_Recylcing extends Application {
         // Create the AmpStart Page grid pane
         GridPane lobitosRecycleGridPane = createLobitosRecycleGridPane();
         lobitosRecycleGridPane.setMaxSize( 800, 550);
-        lobitosRecycleGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+        lobitosRecycleGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
         // Add UI controls to the AmpStart form grid pane
         addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
         // Set the scene in AmpStart
@@ -34,14 +34,6 @@ public class LobitosMap_Recylcing extends Application {
 
 
     public static void main(String[] args) { launch(args); }
-
-    static BackgroundImage createImage(String url) {
-        return new BackgroundImage(
-                new Image(url),
-                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT,
-                new BackgroundPosition(Side.LEFT, 0, true, Side.BOTTOM, 0, true),
-                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, false, true));
-    }
 
     public static GridPane createLobitosRecycleGridPane() {
         // Set new Grid Pane for LoginPage
@@ -62,9 +54,9 @@ public class LobitosMap_Recylcing extends Application {
 
     public static void addUIControlsLobitosRecycle(GridPane lobitosRecycleGridPane, Stage primaryStage) {
 
-        Background WCImage = new Background( createImage("WC.png"));
-//        Background RecyclingImage = new Background( createImage("Recycling.png"));
-//        Background BinImage = new Background( createImage("Bin.png"));
+        Background WCImage = new Background(LobitosMap.createImage("WC.png"));
+        Background RecyclingImage = new Background(LobitosMap.createImage("Recycling.png"));
+        Background BinImage = new Background(LobitosMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
@@ -85,8 +77,7 @@ public class LobitosMap_Recylcing extends Application {
 
         // Add Recycling Button
         Button recyclingButton = new Button();
-//        recyclingButton.setBackground(RecyclingImage);
-        recyclingButton.setBackground(WCImage);
+        recyclingButton.setBackground(RecyclingImage);
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
         recyclingButton.setPrefSize(25,25);
@@ -103,7 +94,7 @@ public class LobitosMap_Recylcing extends Application {
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
-        wasteBinsButton.setBackground(WCImage);
+        wasteBinsButton.setBackground(BinImage);
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
         wasteBinsButton.setPrefSize(25,25);

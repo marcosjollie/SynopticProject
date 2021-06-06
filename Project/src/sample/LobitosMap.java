@@ -57,9 +57,6 @@ public class LobitosMap extends Application {
         // Set new Grid Pane for LoginPage
         GridPane lobitosMapGridPane = new GridPane();
         lobitosMapGridPane.setAlignment(Pos.CENTER);
-        /*lobitosMapGridPane.setHgap(10);
-        lobitosMapGridPane.setVgap(10);*/
-//        lobitosMapGridPane.setPadding(new Insets(25,25,25,25));
         lobitosMapGridPane.setPadding(new Insets(0, 0, 0, 0));
         // Add Column Constraints
         ColumnConstraints columnOneConstraints = new ColumnConstraints(100, 100, Double.MAX_VALUE);
@@ -75,18 +72,11 @@ public class LobitosMap extends Application {
 
     public static void addUIControlsLobitosMap(GridPane lobitosMapGridPane, Stage primaryStage) {
 
-        //creating image for goals button
-        /*ImageView WCImage = new ImageView(new Image("WC.png"));
-        WCImage.setFitHeight(30);
-        WCImage.setFitWidth(30);
-        WCImage.setSmooth(true);
-        WCImage.setCache(true);*/
-//        Image RecyclingImage = new Image("Recycling.png");
-//        Image BinImage = new Image("Bin.png");
+
 
         Background WCImage = new Background( createImage("WC.png"));
-//        Background RecyclingImage = new Background( createImage("Recycling.png"));
-//        Background BinImage = new Background( createImage("Bin.png"));
+        Background RecyclingImage = new Background( createImage("Recycling.png"));
+        Background BinImage = new Background( createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
@@ -109,7 +99,7 @@ public class LobitosMap extends Application {
         Button recyclingButton = new Button();
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
-        recyclingButton.setBackground(WCImage);
+        recyclingButton.setBackground(RecyclingImage);
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         lobitosMapGridPane.add(recyclingButton, 0, 1);
@@ -126,7 +116,7 @@ public class LobitosMap extends Application {
         Button wasteBinsButton = new Button();
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
-        wasteBinsButton.setBackground(WCImage);
+        wasteBinsButton.setBackground(BinImage);
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         lobitosMapGridPane.add(wasteBinsButton, 0, 2);

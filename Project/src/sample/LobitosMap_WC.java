@@ -57,18 +57,9 @@ public class LobitosMap_WC extends Application {
 
     public static void addUIControlsLobitosWC(GridPane lobitosWCGridPane, Stage primaryStage) {
 
-        //creating image for goals button
-        /*ImageView WCImage = new ImageView(new Image("WC.png"));
-        WCImage.setFitHeight(30);
-        WCImage.setFitWidth(30);
-        WCImage.setSmooth(true);
-        WCImage.setCache(true);*/
-//        Image RecyclingImage = new Image("Recycling.png");
-//        Image BinImage = new Image("Bin.png");
-
         Background WCImage = new Background( LobitosMap.createImage("WC.png"));
-//        Background RecyclingImage = new Background( createImage("Recycling.png"));
-//        Background BinImage = new Background( createImage("Bin.png"));
+        Background RecyclingImage = new Background( LobitosMap.createImage("Recycling.png"));
+        Background BinImage = new Background( LobitosMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
@@ -89,8 +80,7 @@ public class LobitosMap_WC extends Application {
 
         // Add Recycling Button
         Button recyclingButton = new Button();
-//        recyclingButton.setBackground(RecyclingImage);
-        recyclingButton.setBackground(WCImage);
+        recyclingButton.setBackground(RecyclingImage);
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
         recyclingButton.setPrefSize(25,25);
@@ -107,7 +97,7 @@ public class LobitosMap_WC extends Application {
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
-        wasteBinsButton.setBackground(WCImage);
+        wasteBinsButton.setBackground(BinImage);
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
         wasteBinsButton.setPrefSize(25,25);
