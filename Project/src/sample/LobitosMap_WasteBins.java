@@ -123,9 +123,9 @@ public class LobitosMap_WasteBins extends Application {
 
         //////////////////////////////////////////////////
 
-        // Add WC Button
+        // Add Waste Bin Button
         Button wcButton1 = new Button();
-        wcButton1.setBackground(WCImage);
+        wcButton1.setBackground(BinImage);
         wcButton1.setScaleX(0.4);
         wcButton1.setScaleY(0.4);
         wcButton1.setPrefSize(25,25);
@@ -134,7 +134,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wcButton1, new Insets(-115, -100,115,100));
 
         Button wcButton2 = new Button();
-        wcButton2.setBackground(WCImage);
+        wcButton2.setBackground(BinImage);
         wcButton2.setScaleX(0.4);
         wcButton2.setScaleY(0.4);
         wcButton2.setPrefSize(25,25);
@@ -143,7 +143,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wcButton2, new Insets(-20, -160,20,160));
 
         Button wcButton3 = new Button();
-        wcButton3.setBackground(WCImage);
+        wcButton3.setBackground(BinImage);
         wcButton3.setScaleX(0.4);
         wcButton3.setScaleY(0.4);
         wcButton3.setPrefSize(25,25);
@@ -152,7 +152,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
 
         Button wcButton4 = new Button();
-        wcButton4.setBackground(WCImage);
+        wcButton4.setBackground(BinImage);
         wcButton4.setScaleX(0.4);
         wcButton4.setScaleY(0.4);
         wcButton4.setPrefSize(25,25);
@@ -161,7 +161,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wcButton4, new Insets(-45, 410,45,-410));
 
         Button wcButton5 = new Button();
-        wcButton5.setBackground(WCImage);
+        wcButton5.setBackground(BinImage);
         wcButton5.setScaleX(0.4);
         wcButton5.setScaleY(0.4);
         wcButton5.setPrefSize(25,25);
@@ -170,7 +170,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wcButton5, new Insets(-115, 350,115,-350));
 
         Button wcButton6 = new Button();
-        wcButton6.setBackground(WCImage);
+        wcButton6.setBackground(BinImage);
         wcButton6.setScaleX(0.4);
         wcButton6.setScaleY(0.4);
         wcButton6.setPrefSize(25,25);
@@ -180,7 +180,7 @@ public class LobitosMap_WasteBins extends Application {
 
 
         Button wcButton7 = new Button();
-        wcButton7.setBackground(WCImage);
+        wcButton7.setBackground(BinImage);
         wcButton7.setScaleX(0.4);
         wcButton7.setScaleY(0.4);
         wcButton7.setPrefSize(25,25);

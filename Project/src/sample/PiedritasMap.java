@@ -19,31 +19,24 @@ public class PiedritasMap extends Application {
         primaryStage.setTitle("SMART MAP - Piedritas Map");
         // Create the AmpStart Page grid pane
         GridPane piedritasMapGridPane = createPiedritasMapGridPane();
-        piedritasMapGridPane.setMaxSize( 800, 550);
+        piedritasMapGridPane.setMaxSize( 950, 550);
         piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
-
-
         // Add UI controls to the AmpStart form grid pane
         addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
         // Set the scene in AmpStart
-        Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 800, 500);
+        Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
         // Display stage
         primaryStage.setScene(PiedritasMapScene);
         primaryStage.show();
-
-
-
     }
+
     public static void main(String[] args) { launch(args); }
 
     public static GridPane createPiedritasMapGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane piedritasMapGridPane = new GridPane();
         piedritasMapGridPane.setAlignment(Pos.CENTER);
-        piedritasMapGridPane.setHgap(10);
-        piedritasMapGridPane.setVgap(10);
         piedritasMapGridPane.setPadding(new Insets(25,25,25,25));
-//        loginGridPane.setPadding(new Insets(40, 40, 40, 40));
         // Add Column Constraints
         ColumnConstraints columnOneConstraints = new ColumnConstraints(100, 100, Double.MAX_VALUE);
         columnOneConstraints.setHalignment(HPos.RIGHT);
