@@ -153,12 +153,34 @@ public class LobitosMap extends Application {
             primaryStage.setTitle("SMART MAP - Lobitos Map");
             GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
             lobitosWCGridPane.setMaxSize( 800, 550);
-            lobitosWCGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+            lobitosWCGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
             LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
             Scene LobitosWCScene = new Scene(lobitosWCGridPane, 800, 550);
             primaryStage.setScene(LobitosWCScene);
             primaryStage.show();
+        });
 
+        recyclingButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Lobitos Map");
+            GridPane lobitosRecycleGridPane = LobitosMap_Recylcing.createLobitosRecycleGridPane();
+            lobitosRecycleGridPane.setMaxSize( 800, 550);
+            lobitosRecycleGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+            LobitosMap_Recylcing.addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
+            Scene LobitosRecycleScene = new Scene(lobitosRecycleGridPane, 800, 550);
+            primaryStage.setScene(LobitosRecycleScene);
+            primaryStage.show();
+        });
+
+
+        wasteBinsButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Lobitos Map");
+            GridPane lobitosWasteBinsGridPane = LobitosMap_WasteBins.createLobitosWasteBinsGridPane();
+            lobitosWasteBinsGridPane.setMaxSize( 800, 550);
+            lobitosWasteBinsGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+            LobitosMap_WasteBins.addUIControlsLobitosWasteBins(lobitosWasteBinsGridPane, primaryStage);
+            Scene LobitosWasteBinsScene = new Scene(lobitosWasteBinsGridPane, 800, 550);
+            primaryStage.setScene(LobitosWasteBinsScene);
+            primaryStage.show();
         });
 
 
