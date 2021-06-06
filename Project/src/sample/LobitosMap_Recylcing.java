@@ -119,6 +119,16 @@ public class LobitosMap_Recylcing extends Application {
         lobitosRecycleGridPane.setMargin(backButton, new Insets(0, -5,-95,5));
 
 
+        // Add Report Issue Button
+        Button reportIssueButton = new Button("Report Issue");
+        reportIssueButton.setFont(Font.font("Arial", 12));
+        reportIssueButton.setPrefSize(100,20);
+        reportIssueButton.setDefaultButton(true);
+        lobitosRecycleGridPane.add(reportIssueButton, 1, 10, 1, 1);
+        lobitosRecycleGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        lobitosRecycleGridPane.setMargin(reportIssueButton, new Insets(0, -20,-95, 20));
+
+
         //////////////////////////////////////////////////
 
         // Add Recycle Buttons
@@ -148,44 +158,6 @@ public class LobitosMap_Recylcing extends Application {
         wcButton3.setDefaultButton(true);
         lobitosRecycleGridPane.add(wcButton3, 2, 4);
         lobitosRecycleGridPane.setMargin(wcButton3, new Insets(25, 90,-25,-90));
-
-        /*Button wcButton4 = new Button();
-        wcButton4.setBackground(RecyclingImage);
-        wcButton4.setScaleX(0.4);
-        wcButton4.setScaleY(0.4);
-        wcButton4.setPrefSize(25,25);
-        wcButton4.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton4, 3, 4);
-        lobitosRecycleGridPane.setMargin(wcButton4, new Insets(-45, 410,45,-410));
-
-        Button wcButton5 = new Button();
-        wcButton5.setBackground(RecyclingImage);
-        wcButton5.setScaleX(0.4);
-        wcButton5.setScaleY(0.4);
-        wcButton5.setPrefSize(25,25);
-        wcButton5.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton5, 4, 4);
-        lobitosRecycleGridPane.setMargin(wcButton5, new Insets(-115, 350,115,-350));
-
-        Button wcButton6 = new Button();
-        wcButton6.setBackground(RecyclingImage);
-        wcButton6.setScaleX(0.4);
-        wcButton6.setScaleY(0.4);
-        wcButton6.setPrefSize(25,25);
-        wcButton6.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton6, 5, 4);
-        lobitosRecycleGridPane.setMargin(wcButton6, new Insets(-190, 310,190,-310));
-
-
-        Button wcButton7 = new Button();
-        wcButton7.setBackground(RecyclingImage);
-        wcButton7.setScaleX(0.4);
-        wcButton7.setScaleY(0.4);
-        wcButton7.setPrefSize(25,25);
-        wcButton7.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton7, 5, 4);
-        lobitosRecycleGridPane.setMargin(wcButton7, new Insets(-20, 285,20,-285));*/
-
 
 
         //////////////////////////////////////////////////
@@ -231,6 +203,16 @@ public class LobitosMap_Recylcing extends Application {
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
             primaryStage.setScene(LobitosMapScene);
+            primaryStage.show();
+        });
+
+        reportIssueButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Report Issue");
+            GridPane reportPaneGridPane = Report.createReportGridPane();
+            reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+            Report.addUIControlsReport(reportPaneGridPane, primaryStage);
+            Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+            primaryStage.setScene(reportScene);
             primaryStage.show();
         });
 

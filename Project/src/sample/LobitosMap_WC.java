@@ -122,6 +122,16 @@ public class LobitosMap_WC extends Application {
         lobitosWCGridPane.setMargin(backButton, new Insets(0, -5,-95,5));
 
 
+        // Add Report Issue Button
+        Button reportIssueButton = new Button("Report Issue");
+        reportIssueButton.setFont(Font.font("Arial", 12));
+        reportIssueButton.setPrefSize(100,20);
+        reportIssueButton.setDefaultButton(true);
+        lobitosWCGridPane.add(reportIssueButton, 1, 10, 1, 1);
+        lobitosWCGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        lobitosWCGridPane.setMargin(reportIssueButton, new Insets(0, -95,-95, 95));
+
+
         //////////////////////////////////////////////////
 
         // Add WC Button
@@ -239,6 +249,16 @@ public class LobitosMap_WC extends Application {
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
             primaryStage.setScene(LobitosMapScene);
+            primaryStage.show();
+        });
+
+        reportIssueButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Report Issue");
+            GridPane reportPaneGridPane = Report.createReportGridPane();
+            reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+            Report.addUIControlsReport(reportPaneGridPane, primaryStage);
+            Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+            primaryStage.setScene(reportScene);
             primaryStage.show();
         });
 

@@ -136,7 +136,17 @@ public class LobitosMap extends Application {
         backButton.setDefaultButton(true);
         lobitosMapGridPane.add(backButton, 0, 10, 1, 1);
         lobitosMapGridPane.setHalignment(backButton, HPos.LEFT);
-        lobitosMapGridPane.setMargin(backButton, new Insets(0, -5,-127,5));
+        lobitosMapGridPane.setMargin(backButton, new Insets(0, -5,-135,5));
+
+
+        // Add Report Issue Button
+        Button reportIssueButton = new Button("Report Issue");
+        reportIssueButton.setFont(Font.font("Arial", 12));
+        reportIssueButton.setPrefSize(100,20);
+        reportIssueButton.setDefaultButton(true);
+        lobitosMapGridPane.add(reportIssueButton, 1, 10, 1, 1);
+        lobitosMapGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        lobitosMapGridPane.setMargin(reportIssueButton, new Insets(0, 5,-135, -5));
 
 
         wcButton.setOnAction(event -> {
@@ -181,6 +191,16 @@ public class LobitosMap extends Application {
             HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
             Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
             primaryStage.setScene(HomePageScene);
+            primaryStage.show();
+        });
+
+        reportIssueButton.setOnAction(event -> {
+            primaryStage.setTitle("SMART MAP - Report Issue");
+            GridPane reportPaneGridPane = Report.createReportGridPane();
+            reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+            Report.addUIControlsReport(reportPaneGridPane, primaryStage);
+            Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+            primaryStage.setScene(reportScene);
             primaryStage.show();
         });
 

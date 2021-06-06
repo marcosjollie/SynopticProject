@@ -153,11 +153,14 @@ public class HomePage extends Application {
             @Override
             public void handle(ActionEvent actionEvent) {
                 primaryStage.setTitle("SMART MAP - Piedritas Map");
+                // Create the AmpStart Page grid pane
                 GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
-                piedritasMapGridPane.setStyle("-fx-background-color: #4aa4ef");
+                piedritasMapGridPane.setMaxSize( 950, 550);
+                piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+                // Add UI controls to the AmpStart form grid pane
                 PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
                 // Set the scene in AmpStart
-                Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 800, 500);
+                Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
                 // Display stage
                 primaryStage.setScene(PiedritasMapScene);
                 primaryStage.show();
