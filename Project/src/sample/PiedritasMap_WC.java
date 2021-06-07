@@ -98,13 +98,13 @@ public class PiedritasMap_WC extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         piedritasWCGridPane.add(wasteBinsButton, 0, 2);
-        piedritasWCGridPane.setMargin(wasteBinsButton, new Insets(0, 60,305,-60));
+        piedritasWCGridPane.setMargin(wasteBinsButton, new Insets(0, 60,280,-60));
 
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         piedritasWCGridPane.add(wasteBinsLabel, 1,2);
-        piedritasWCGridPane.setMargin(wasteBinsLabel, new Insets(0, 60,305,-55));
+        piedritasWCGridPane.setMargin(wasteBinsLabel, new Insets(0, 60,280,-55));
 
 
         // Add Back Button
@@ -124,30 +124,85 @@ public class PiedritasMap_WC extends Application {
         reportIssueButton.setDefaultButton(true);
         piedritasWCGridPane.add(reportIssueButton, 1, 10, 1, 1);
         piedritasWCGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
+        piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -45,-135, 45));
+
+
+        ////////////////////////////////////////////////////////////////////////////
+
+        // Add WC Button
+        Button wcButton1 = new Button();
+        wcButton1.setBackground(WCImage);
+        wcButton1.setScaleX(0.4);
+        wcButton1.setScaleY(0.4);
+        wcButton1.setPrefSize(25,25);
+        wcButton1.setDefaultButton(true);
+        piedritasWCGridPane.add(wcButton1, 0, 4);
+        piedritasWCGridPane.setMargin(wcButton1, new Insets(-115, -100,115,100));
+
+        Button wcButton2 = new Button();
+        wcButton2.setBackground(WCImage);
+        wcButton2.setScaleX(0.4);
+        wcButton2.setScaleY(0.4);
+        wcButton2.setPrefSize(25,25);
+        wcButton2.setDefaultButton(true);
+        piedritasWCGridPane.add(wcButton2, 1, 4);
+        piedritasWCGridPane.setMargin(wcButton2, new Insets(-20, -160,20,160));
+
+        Button wcButton3 = new Button();
+        wcButton3.setBackground(WCImage);
+        wcButton3.setScaleX(0.4);
+        wcButton3.setScaleY(0.4);
+        wcButton3.setPrefSize(25,25);
+        wcButton3.setDefaultButton(true);
+        piedritasWCGridPane.add(wcButton3, 2, 4);
+        piedritasWCGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
+
+        //////////////////////////////////////////////////////////////////////////////
 
 
         wcButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
+            piedritasMapGridPane.setMaxSize( 950, 550);
+            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+            Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+            primaryStage.setScene(PiedritasMapScene);
+            primaryStage.show();
         });
 
         recyclingButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasRecyclingGridPane = PiedritasMap_Recycling.createPiedritasRecyclingGridPane();
+            piedritasRecyclingGridPane.setMaxSize( 950, 550);
+            piedritasRecyclingGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap_Recycling.addUIControlsPiedritasRecyclingGridPane(piedritasRecyclingGridPane, primaryStage);
+            Scene PiedritasRecyclingScene = new Scene(piedritasRecyclingGridPane, 950, 550);
+            primaryStage.setScene(PiedritasRecyclingScene);
+            primaryStage.show();
         });
 
 
         wasteBinsButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasWasteBinsGridPane = PiedritasMap_WasteBins.createPiedritasWasteBinsGridPane();
+            piedritasWasteBinsGridPane.setMaxSize( 950, 550);
+            piedritasWasteBinsGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap_WasteBins.addUIControlsPiedritasWasteBinsGridPane(piedritasWasteBinsGridPane, primaryStage);
+            Scene PiedritasWasteBinsScene = new Scene(piedritasWasteBinsGridPane, 950, 550);
+            primaryStage.setScene(PiedritasWasteBinsScene);
+            primaryStage.show();
         });
 
 
         backButton.setOnAction(event -> {
-            primaryStage.setTitle("SMART MAP - Home Page");
-            GridPane homePageGridPane = HomePage.createHomePageGridPane();
-            homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
-            HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
-            Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
-            primaryStage.setScene(HomePageScene);
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
+            piedritasMapGridPane.setMaxSize( 950, 550);
+            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+            Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+            primaryStage.setScene(PiedritasMapScene);
             primaryStage.show();
         });
 

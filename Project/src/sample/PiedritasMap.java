@@ -135,16 +135,37 @@ public class PiedritasMap extends Application {
 
 
         wcButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasWCGridPane = PiedritasMap_WC.createPiedritasWCGridPane();
+            piedritasWCGridPane.setMaxSize( 950, 550);
+            piedritasWCGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap_WC.addUIControlsPiedritasWCGridPane(piedritasWCGridPane, primaryStage);
+            Scene PiedritasWCScene = new Scene(piedritasWCGridPane, 950, 550);
+            primaryStage.setScene(PiedritasWCScene);
+            primaryStage.show();
         });
 
         recyclingButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasRecyclingGridPane = PiedritasMap_Recycling.createPiedritasRecyclingGridPane();
+            piedritasRecyclingGridPane.setMaxSize( 950, 550);
+            piedritasRecyclingGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap_Recycling.addUIControlsPiedritasRecyclingGridPane(piedritasRecyclingGridPane, primaryStage);
+            Scene PiedritasRecyclingScene = new Scene(piedritasRecyclingGridPane, 950, 550);
+            primaryStage.setScene(PiedritasRecyclingScene);
+            primaryStage.show();
         });
 
 
         wasteBinsButton.setOnAction(event -> {
-
+            primaryStage.setTitle("SMART MAP - Piedritas Map");
+            GridPane piedritasWasteBinsGridPane = PiedritasMap_WasteBins.createPiedritasWasteBinsGridPane();
+            piedritasWasteBinsGridPane.setMaxSize( 950, 550);
+            piedritasWasteBinsGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            PiedritasMap_WasteBins.addUIControlsPiedritasWasteBinsGridPane(piedritasWasteBinsGridPane, primaryStage);
+            Scene PiedritasWasteBinsScene = new Scene(piedritasWasteBinsGridPane, 950, 550);
+            primaryStage.setScene(PiedritasWasteBinsScene);
+            primaryStage.show();
         });
 
 
