@@ -19,14 +19,12 @@ public class Report_Spanish extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("SMART MAP - Report Issue");
+        primaryStage.setTitle("SMART MAP - Formulario de Problema");
         GridPane reportPaneGridPane = createReportGridPane();
         reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
         addUIControlsReport(reportPaneGridPane, primaryStage);
         Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
         primaryStage.setScene(reportScene);
-//        primaryStage.setWidth(800);
-//        primaryStage.setHeight(700);
         primaryStage.show();
     }
     public static void main(String[] args) { launch(args); }
@@ -59,7 +57,7 @@ public class Report_Spanish extends Application {
     public static void addUIControlsReport(GridPane reportGridPane, Stage primaryStage) {
 
         // Add Header
-        Label headerLabel = new Label("formulario de Problema");
+        Label headerLabel = new Label("Formulario de Problema");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         reportGridPane.add(headerLabel, 0,0,2,1);
         reportGridPane.setHalignment(headerLabel, HPos.CENTER);
@@ -126,14 +124,14 @@ public class Report_Spanish extends Application {
 
 
         // Add Email Label
-        Label emailLabel = new Label("Correo electronico: ");
+        Label emailLabel = new Label("Correo electronico (opcional): ");
         emailLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(emailLabel, 0, 5);
         reportGridPane.setHalignment(emailLabel, HPos.LEFT);
         reportGridPane.setMargin(emailLabel, new Insets(0, 0,0,0));
         // Add Email Text Field
         TextField emailField = new TextField();
-        emailField.setPromptText("Escribe correo electronico");
+        emailField.setPromptText("Correo electronico (opcional)");
         emailField.setMaxSize(200,30);
         reportGridPane.add(emailField, 1, 5);
         reportGridPane.setMargin(emailField, new Insets(0, 0,0,-15));
@@ -166,16 +164,16 @@ public class Report_Spanish extends Application {
 
                 // Add Empty Field Alerts
                 if ((issueTypeBox.getValue()!="Fuga de aguas residuales" && issueTypeBox.getValue()!="Exceso de basura")){
-                    HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Form Error!", "Porfavor, elige el"); }
+                    HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Error de Formulario!", "Porfavor, elige el tipo de problema"); }
                 else if (descriptionField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter description"); }
+                        "Error de Formulario!", "Porfavor, escriba una descripción."); }
                 else if (locationField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter location"); }
+                        "Error de Formulario!", "Porfavor, escriba la ubicación."); }
                 else if (dateField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter date"); }
+                        "Error de Formulario!", "Porfavor, escriba la fecha."); }
 
                 else if (emailField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter email"); }
+                        "Error de Formulario!", "Porfavor, escriba correao electronico."); }
 
 
                 else{
@@ -189,7 +187,7 @@ public class Report_Spanish extends Application {
 
 
                     HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
-                            "Submission Successful!", "Issue report has been sent.");
+                            "Formulario enviado !", "Formulario a sido enviado.");
 
 
 
@@ -200,8 +198,7 @@ public class Report_Spanish extends Application {
 
 
         backButton.setOnAction(event -> {
-            primaryStage.setTitle("SMART MAP - Home Page");
-
+            primaryStage.setTitle("SMART MAP - Página Principal");
             GridPane homePageGridPane = HomePage.createHomePageGridPane();
             homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
             HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);

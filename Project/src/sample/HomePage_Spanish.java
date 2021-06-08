@@ -1,6 +1,5 @@
 package sample;
 
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,7 +7,10 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -18,38 +20,20 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-
-
-public class HomePage extends Application {
+public class HomePage_Spanish extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("SMART MAP - Home Page");
-
-        // Create the AmpStart Page grid pane
+        primaryStage.setTitle("SMART MAP - Página Principal");
         GridPane homePageGridPane = createHomePageGridPane();
         homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
-        // Add UI controls to the AmpStart form grid pane
         addUIControlsHomePage(homePageGridPane, primaryStage);
-        // Set the scene in AmpStart
         Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
-        // Display stage
         primaryStage.setScene(HomePageScene);
         primaryStage.show();
-
-
-
     }
+
     public static void main(String[] args) { launch(args); }
-
-
-//    static boolean LaguageIsEng(){
-//
-//    }
-
-
-
-
 
 
 
@@ -82,7 +66,7 @@ public class HomePage extends Application {
         homePageGridPane.setMargin(FxAppHeader, new Insets(20, 0, 20, 0));
 
         // Add Welcome label
-        Label welcomeLabel = new Label("Welcome");
+        Label welcomeLabel = new Label("Bienvenido");
         welcomeLabel.setFont(Font.font("Arial", 24));
         homePageGridPane.add(welcomeLabel, 0, 1, 2, 1);
         homePageGridPane.setHalignment(welcomeLabel, HPos.CENTER);
@@ -90,7 +74,7 @@ public class HomePage extends Application {
 
 
         // Add Lobitos map Button
-        Button lobitosMapButton = new Button("Lobitos map");
+        Button lobitosMapButton = new Button("Mapa de Lobitos");
         lobitosMapButton.setFont(Font.font("Arial", /*FontWeight.BOLD,*/12));
         lobitosMapButton.setPrefHeight(30);
         lobitosMapButton.setPrefWidth(150);
@@ -100,7 +84,7 @@ public class HomePage extends Application {
         homePageGridPane.setMargin(lobitosMapButton, new Insets(0, 0, 0, 0));
 
         // Add Piedritas map Button
-        Button piedritasMapButton = new Button("Piedritas map");
+        Button piedritasMapButton = new Button("Mapa de Piedritas");
         piedritasMapButton.setFont(Font.font("Arial",12));
         piedritasMapButton.setPrefHeight(30);
         piedritasMapButton.setPrefWidth(150);
@@ -111,7 +95,7 @@ public class HomePage extends Application {
 
 
         // Add Language Label
-        Label languageLabel = new Label("Language: ");
+        Label languageLabel = new Label("Idioma: ");
         languageLabel.setFont(Font.font("Arial", 14));
         homePageGridPane.add(languageLabel, 0,6);
         homePageGridPane.setHalignment(languageLabel, HPos.LEFT);
@@ -120,16 +104,16 @@ public class HomePage extends Application {
         // Add Laguage Box
         ChoiceBox languageBox = new ChoiceBox();
         languageBox.setMaxSize(100,30);
-        languageBox.setValue("English");
-        languageBox.getItems().add("English");
-        languageBox.getItems().add("Spanish");
+        languageBox.setValue("Español");
+        languageBox.getItems().add("Ingles");
+        languageBox.getItems().add("Español");
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
         homePageGridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
 
         lobitosMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(languageBox.getValue() == "English"){
+                if(languageBox.getSelectionModel().getSelectedItem() == "Ingles"){
                     primaryStage.setTitle("SMART MAP - Lobitos Map");
                     GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
                     lobitosMapGridPane.setMaxSize( 800, 550);
@@ -138,7 +122,10 @@ public class HomePage extends Application {
                     Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
                     primaryStage.setScene(LobitosMapScene);
                     primaryStage.show();
-                }else{}
+                }else{
+                    primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+
+                }
             }
         });
 
@@ -147,7 +134,7 @@ public class HomePage extends Application {
         piedritasMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if(languageBox.getValue() == "English"){
+                if(languageBox.getSelectionModel().getSelectedItem() == "Ingles"){
                     primaryStage.setTitle("SMART MAP - Piedritas Map");
                     GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
                     piedritasMapGridPane.setMaxSize( 950, 550);
@@ -156,19 +143,15 @@ public class HomePage extends Application {
                     Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
                     primaryStage.setScene(PiedritasMapScene);
                     primaryStage.show();
-                }else{}
+                }else{
+                    primaryStage.setTitle("SMART MAP - Mapa de Piedritas");
+
+                }
+
             }
         });
     }
 
-    public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.initOwner(owner);
-        alert.show();
-    }
-
 }
+
 
