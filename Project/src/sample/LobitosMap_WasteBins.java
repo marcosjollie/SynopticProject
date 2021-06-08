@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -134,139 +135,198 @@ public class LobitosMap_WasteBins extends Application {
         //////////////////////////////////////////////////
 
         // Add Waste Bin Button
-        Button wcButton1 = new Button();
-        wcButton1.setBackground(BinImage);
-        wcButton1.setScaleX(0.4);
-        wcButton1.setScaleY(0.4);
-        wcButton1.setPrefSize(25,25);
-        wcButton1.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton1, 0, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton1, new Insets(35, 68,-35,-68));
+        Button wasteBinsButton1 = new Button();
+        wasteBinsButton1.setBackground(BinImage);
+        wasteBinsButton1.setScaleX(0.4);
+        wasteBinsButton1.setScaleY(0.4);
+        wasteBinsButton1.setPrefSize(25,25);
+        wasteBinsButton1.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton1, 0, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton1, new Insets(35, 68,-35,-68));
 
-        Button wcButton2 = new Button();
-        wcButton2.setBackground(BinImage);
-        wcButton2.setScaleX(0.4);
-        wcButton2.setScaleY(0.4);
-        wcButton2.setPrefSize(25,25);
-        wcButton2.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton2, 1, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton2, new Insets(-5, 50,5,-50));
+        Button wasteBinsButton2 = new Button();
+        wasteBinsButton2.setBackground(BinImage);
+        wasteBinsButton2.setScaleX(0.4);
+        wasteBinsButton2.setScaleY(0.4);
+        wasteBinsButton2.setPrefSize(25,25);
+        wasteBinsButton2.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton2, 1, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton2, new Insets(-5, 50,5,-50));
 
-        Button wcButton3 = new Button();
-        wcButton3.setBackground(BinImage);
-        wcButton3.setScaleX(0.4);
-        wcButton3.setScaleY(0.4);
-        wcButton3.setPrefSize(25,25);
-        wcButton3.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton3, 2, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton3, new Insets(-70, 520,70,-520));
+        Button wasteBinsButton3 = new Button();
+        wasteBinsButton3.setBackground(BinImage);
+        wasteBinsButton3.setScaleX(0.4);
+        wasteBinsButton3.setScaleY(0.4);
+        wasteBinsButton3.setPrefSize(25,25);
+        wasteBinsButton3.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton3, 2, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton3, new Insets(-70, 520,70,-520));
 
-        Button wcButton4 = new Button();
-        wcButton4.setBackground(BinImage);
-        wcButton4.setScaleX(0.4);
-        wcButton4.setScaleY(0.4);
-        wcButton4.setPrefSize(25,25);
-        wcButton4.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton4, 3, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton4, new Insets(-60, 450,60,-450));
+        Button wasteBinsButton4 = new Button();
+        wasteBinsButton4.setBackground(BinImage);
+        wasteBinsButton4.setScaleX(0.4);
+        wasteBinsButton4.setScaleY(0.4);
+        wasteBinsButton4.setPrefSize(25,25);
+        wasteBinsButton4.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton4, 3, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton4, new Insets(-60, 450,60,-450));
 
-        Button wcButton5 = new Button();
-        wcButton5.setBackground(BinImage);
-        wcButton5.setScaleX(0.4);
-        wcButton5.setScaleY(0.4);
-        wcButton5.setPrefSize(25,25);
-        wcButton5.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton5, 4, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton5, new Insets(25, 455,-25,-455));
+        Button wasteBinsButton5 = new Button();
+        wasteBinsButton5.setBackground(BinImage);
+        wasteBinsButton5.setScaleX(0.4);
+        wasteBinsButton5.setScaleY(0.4);
+        wasteBinsButton5.setPrefSize(25,25);
+        wasteBinsButton5.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton5, 4, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton5, new Insets(25, 455,-25,-455));
 
-        Button wcButton6 = new Button();
-        wcButton6.setBackground(BinImage);
-        wcButton6.setScaleX(0.4);
-        wcButton6.setScaleY(0.4);
-        wcButton6.setPrefSize(25,25);
-        wcButton6.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton6, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton6, new Insets(-65, 370,65,-370));
-
-
-        Button wcButton7 = new Button();
-        wcButton7.setBackground(BinImage);
-        wcButton7.setScaleX(0.4);
-        wcButton7.setScaleY(0.4);
-        wcButton7.setPrefSize(25,25);
-        wcButton7.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton7, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton7, new Insets(-18, 275,18,-275));
+        Button wasteBinsButton6 = new Button();
+        wasteBinsButton6.setBackground(BinImage);
+        wasteBinsButton6.setScaleX(0.4);
+        wasteBinsButton6.setScaleY(0.4);
+        wasteBinsButton6.setPrefSize(25,25);
+        wasteBinsButton6.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton6, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton6, new Insets(-65, 370,65,-370));
 
 
-        Button wcButton8 = new Button();
-        wcButton8.setBackground(BinImage);
-        wcButton8.setScaleX(0.4);
-        wcButton8.setScaleY(0.4);
-        wcButton8.setPrefSize(25,25);
-        wcButton8.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton8, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton8, new Insets(-200, 300,200,-300));
+        Button wasteBinsButton7 = new Button();
+        wasteBinsButton7.setBackground(BinImage);
+        wasteBinsButton7.setScaleX(0.4);
+        wasteBinsButton7.setScaleY(0.4);
+        wasteBinsButton7.setPrefSize(25,25);
+        wasteBinsButton7.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton7, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton7, new Insets(-18, 275,18,-275));
 
 
-        Button wcButton9 = new Button();
-        wcButton9.setBackground(BinImage);
-        wcButton9.setScaleX(0.4);
-        wcButton9.setScaleY(0.4);
-        wcButton9.setPrefSize(25,25);
-        wcButton9.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton9, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton9, new Insets(-160, 295,160,-295));
+        Button wasteBinsButton8 = new Button();
+        wasteBinsButton8.setBackground(BinImage);
+        wasteBinsButton8.setScaleX(0.4);
+        wasteBinsButton8.setScaleY(0.4);
+        wasteBinsButton8.setPrefSize(25,25);
+        wasteBinsButton8.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton8, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton8, new Insets(-200, 300,200,-300));
 
 
-        Button wcButton10 = new Button();
-        wcButton10.setBackground(BinImage);
-        wcButton10.setScaleX(0.4);
-        wcButton10.setScaleY(0.4);
-        wcButton10.setPrefSize(25,25);
-        wcButton10.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton10, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton10, new Insets(-145, 240,145,-240));
+        Button wasteBinsButton9 = new Button();
+        wasteBinsButton9.setBackground(BinImage);
+        wasteBinsButton9.setScaleX(0.4);
+        wasteBinsButton9.setScaleY(0.4);
+        wasteBinsButton9.setPrefSize(25,25);
+        wasteBinsButton9.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton9, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton9, new Insets(-160, 295,160,-295));
 
 
-        Button wcButton11 = new Button();
-        wcButton11.setBackground(BinImage);
-        wcButton11.setScaleX(0.4);
-        wcButton11.setScaleY(0.4);
-        wcButton11.setPrefSize(25,25);
-        wcButton11.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton11, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton11, new Insets(-25, 100,25,-100));
+        Button wasteBinsButton10 = new Button();
+        wasteBinsButton10.setBackground(BinImage);
+        wasteBinsButton10.setScaleX(0.4);
+        wasteBinsButton10.setScaleY(0.4);
+        wasteBinsButton10.setPrefSize(25,25);
+        wasteBinsButton10.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton10, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton10, new Insets(-145, 240,145,-240));
 
-        Button wcButton12 = new Button();
-        wcButton12.setBackground(BinImage);
-        wcButton12.setScaleX(0.4);
-        wcButton12.setScaleY(0.4);
-        wcButton12.setPrefSize(25,25);
-        wcButton12.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton12, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton12, new Insets(30, 100,-30,-100));
 
-        Button wcButton13 = new Button();
-        wcButton13.setBackground(BinImage);
-        wcButton13.setScaleX(0.4);
-        wcButton13.setScaleY(0.4);
-        wcButton13.setPrefSize(25,25);
-        wcButton13.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton13, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton13, new Insets(-370, 155,370,-155));
+        Button wasteBinsButton11 = new Button();
+        wasteBinsButton11.setBackground(BinImage);
+        wasteBinsButton11.setScaleX(0.4);
+        wasteBinsButton11.setScaleY(0.4);
+        wasteBinsButton11.setPrefSize(25,25);
+        wasteBinsButton11.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton11, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton11, new Insets(-25, 100,25,-100));
 
-        Button wcButton14 = new Button();
-        wcButton14.setBackground(BinImage);
-        wcButton14.setScaleX(0.4);
-        wcButton14.setScaleY(0.4);
-        wcButton14.setPrefSize(25,25);
-        wcButton14.setDefaultButton(true);
-        lobitosWasteBinsGridPane.add(wcButton14, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wcButton14, new Insets(-320, 95,320,-95));
+        Button wasteBinsButton12 = new Button();
+        wasteBinsButton12.setBackground(BinImage);
+        wasteBinsButton12.setScaleX(0.4);
+        wasteBinsButton12.setScaleY(0.4);
+        wasteBinsButton12.setPrefSize(25,25);
+        wasteBinsButton12.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton12, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton12, new Insets(30, 100,-30,-100));
+
+        Button wasteBinsButton13 = new Button();
+        wasteBinsButton13.setBackground(BinImage);
+        wasteBinsButton13.setScaleX(0.4);
+        wasteBinsButton13.setScaleY(0.4);
+        wasteBinsButton13.setPrefSize(25,25);
+        wasteBinsButton13.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton13, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton13, new Insets(-370, 155,370,-155));
+
+        Button wasteBinsButton14 = new Button();
+        wasteBinsButton14.setBackground(BinImage);
+        wasteBinsButton14.setScaleX(0.4);
+        wasteBinsButton14.setScaleY(0.4);
+        wasteBinsButton14.setPrefSize(25,25);
+        wasteBinsButton14.setDefaultButton(true);
+        lobitosWasteBinsGridPane.add(wasteBinsButton14, 5, 4);
+        lobitosWasteBinsGridPane.setMargin(wasteBinsButton14, new Insets(-320, 95,320,-95));
 
 
         //////////////////////////////////////////////////
+
+        wasteBinsButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton8.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton9.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton10.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton11.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton12.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton13.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton14.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        /////////////////////////////////////////////////////
+
 
         wcButton.setOnAction(event -> {
             primaryStage.setTitle("SMART MAP - Lobitos Map");

@@ -5,6 +5,7 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
@@ -131,80 +132,115 @@ public class PiedritasMap_WasteBins extends Application {
         ////////////////////////////////////////////////////////////////////////////
 
         // Add WC Button
-        Button wcButton1 = new Button();
-        wcButton1.setBackground(BinImage);
-        wcButton1.setScaleX(0.4);
-        wcButton1.setScaleY(0.4);
-        wcButton1.setPrefSize(25,25);
-        wcButton1.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton1, 0, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton1, new Insets(-70, -90,70,90));
+        Button wasteBinsButton1 = new Button();
+        wasteBinsButton1.setBackground(BinImage);
+        wasteBinsButton1.setScaleX(0.4);
+        wasteBinsButton1.setScaleY(0.4);
+        wasteBinsButton1.setPrefSize(25,25);
+        wasteBinsButton1.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton1, 0, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton1, new Insets(-70, -90,70,90));
 
-        Button wcButton2 = new Button();
-        wcButton2.setBackground(BinImage);
-        wcButton2.setScaleX(0.4);
-        wcButton2.setScaleY(0.4);
-        wcButton2.setPrefSize(25,25);
-        wcButton2.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton2, 1, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton2, new Insets(-34, -215,34,215));
+        Button wasteBinsButton2 = new Button();
+        wasteBinsButton2.setBackground(BinImage);
+        wasteBinsButton2.setScaleX(0.4);
+        wasteBinsButton2.setScaleY(0.4);
+        wasteBinsButton2.setPrefSize(25,25);
+        wasteBinsButton2.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton2, 1, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton2, new Insets(-34, -215,34,215));
 
-        Button wcButton3 = new Button();
-        wcButton3.setBackground(BinImage);
-        wcButton3.setScaleX(0.4);
-        wcButton3.setScaleY(0.4);
-        wcButton3.setPrefSize(25,25);
-        wcButton3.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton3, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton3, new Insets(-70, 525,70,-525));
+        Button wasteBinsButton3 = new Button();
+        wasteBinsButton3.setBackground(BinImage);
+        wasteBinsButton3.setScaleX(0.4);
+        wasteBinsButton3.setScaleY(0.4);
+        wasteBinsButton3.setPrefSize(25,25);
+        wasteBinsButton3.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton3, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton3, new Insets(-70, 525,70,-525));
 
-        Button wcButton4 = new Button();
-        wcButton4.setBackground(BinImage);
-        wcButton4.setScaleX(0.4);
-        wcButton4.setScaleY(0.4);
-        wcButton4.setPrefSize(25,25);
-        wcButton4.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton4, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton4, new Insets(-25, 473,25,-473));
+        Button wasteBinsButton4 = new Button();
+        wasteBinsButton4.setBackground(BinImage);
+        wasteBinsButton4.setScaleX(0.4);
+        wasteBinsButton4.setScaleY(0.4);
+        wasteBinsButton4.setPrefSize(25,25);
+        wasteBinsButton4.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton4, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton4, new Insets(-25, 473,25,-473));
 
-        Button wcButton5 = new Button();
-        wcButton5.setBackground(BinImage);
-        wcButton5.setScaleX(0.4);
-        wcButton5.setScaleY(0.4);
-        wcButton5.setPrefSize(25,25);
-        wcButton5.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton5, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton5, new Insets(-230, 345,230,-345));
+        Button wasteBinsButton5 = new Button();
+        wasteBinsButton5.setBackground(BinImage);
+        wasteBinsButton5.setScaleX(0.4);
+        wasteBinsButton5.setScaleY(0.4);
+        wasteBinsButton5.setPrefSize(25,25);
+        wasteBinsButton5.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton5, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton5, new Insets(-230, 345,230,-345));
 
-        Button wcButton6 = new Button();
-        wcButton6.setBackground(BinImage);
-        wcButton6.setScaleX(0.4);
-        wcButton6.setScaleY(0.4);
-        wcButton6.setPrefSize(25,25);
-        wcButton6.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton6, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton6, new Insets(-255, 35,255,-35));
+        Button wasteBinsButton6 = new Button();
+        wasteBinsButton6.setBackground(BinImage);
+        wasteBinsButton6.setScaleX(0.4);
+        wasteBinsButton6.setScaleY(0.4);
+        wasteBinsButton6.setPrefSize(25,25);
+        wasteBinsButton6.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton6, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton6, new Insets(-255, 35,255,-35));
 
-        Button wcButton7 = new Button();
-        wcButton7.setBackground(BinImage);
-        wcButton7.setScaleX(0.4);
-        wcButton7.setScaleY(0.4);
-        wcButton7.setPrefSize(25,25);
-        wcButton7.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton7, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton7, new Insets(-180, -10,180,10));
+        Button wasteBinsButton7 = new Button();
+        wasteBinsButton7.setBackground(BinImage);
+        wasteBinsButton7.setScaleX(0.4);
+        wasteBinsButton7.setScaleY(0.4);
+        wasteBinsButton7.setPrefSize(25,25);
+        wasteBinsButton7.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton7, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton7, new Insets(-180, -10,180,10));
 
-        Button wcButton8 = new Button();
-        wcButton8.setBackground(BinImage);
-        wcButton8.setScaleX(0.4);
-        wcButton8.setScaleY(0.4);
-        wcButton8.setPrefSize(25,25);
-        wcButton8.setDefaultButton(true);
-        piedritasWasteBinsGridPane.add(wcButton8, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton8, new Insets(-100, 10,100,-10));
+        Button wasteBinsButton8 = new Button();
+        wasteBinsButton8.setBackground(BinImage);
+        wasteBinsButton8.setScaleX(0.4);
+        wasteBinsButton8.setScaleY(0.4);
+        wasteBinsButton8.setPrefSize(25,25);
+        wasteBinsButton8.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wasteBinsButton8, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wasteBinsButton8, new Insets(-100, 10,100,-10));
 
 
         //////////////////////////////////////////////////////////////////////////////
+
+        wasteBinsButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+        wasteBinsButton8.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+        });
+
+
+        ///////////////////////////////////////////////////////////////////////////////
 
 
         wcButton.setOnAction(event -> {

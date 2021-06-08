@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -148,17 +149,18 @@ public class PiedritasMap_WC extends Application {
         piedritasWCGridPane.add(wcButton2, 1, 4);
         piedritasWCGridPane.setMargin(wcButton2, new Insets(-260, -730,260,730));
 
-//        Button wcButton3 = new Button();
-//        wcButton3.setBackground(WCImage);
-//        wcButton3.setScaleX(0.4);
-//        wcButton3.setScaleY(0.4);
-//        wcButton3.setPrefSize(25,25);
-//        wcButton3.setDefaultButton(true);
-//        piedritasWCGridPane.add(wcButton3, 2, 4);
-//        piedritasWCGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
 
         //////////////////////////////////////////////////////////////////////////////
 
+        wcButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        //////////////////////////////////////////////////////////////////////////////
 
         wcButton.setOnAction(event -> {
             primaryStage.setTitle("SMART MAP - Piedritas Map");

@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -132,35 +133,50 @@ public class LobitosMap_Recylcing extends Application {
         //////////////////////////////////////////////////
 
         // Add Recycle Buttons
-        Button wcButton1 = new Button();
-        wcButton1.setBackground(RecyclingImage);
-        wcButton1.setScaleX(0.4);
-        wcButton1.setScaleY(0.4);
-        wcButton1.setPrefSize(25,25);
-        wcButton1.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton1, 0, 4);
-        lobitosRecycleGridPane.setMargin(wcButton1, new Insets(-65, -245,65,245));
+        Button recyleButton1 = new Button();
+        recyleButton1.setBackground(RecyclingImage);
+        recyleButton1.setScaleX(0.4);
+        recyleButton1.setScaleY(0.4);
+        recyleButton1.setPrefSize(25,25);
+        recyleButton1.setDefaultButton(true);
+        lobitosRecycleGridPane.add(recyleButton1, 0, 4);
+        lobitosRecycleGridPane.setMargin(recyleButton1, new Insets(-65, -245,65,245));
 
-        Button wcButton2 = new Button();
-        wcButton2.setBackground(RecyclingImage);
-        wcButton2.setScaleX(0.4);
-        wcButton2.setScaleY(0.4);
-        wcButton2.setPrefSize(25,25);
-        wcButton2.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton2, 1, 4);
-        lobitosRecycleGridPane.setMargin(wcButton2, new Insets(-52, -350,52,350));
+        Button recyleButton2 = new Button();
+        recyleButton2.setBackground(RecyclingImage);
+        recyleButton2.setScaleX(0.4);
+        recyleButton2.setScaleY(0.4);
+        recyleButton2.setPrefSize(25,25);
+        recyleButton2.setDefaultButton(true);
+        lobitosRecycleGridPane.add(recyleButton2, 1, 4);
+        lobitosRecycleGridPane.setMargin(recyleButton2, new Insets(-52, -350,52,350));
 
-        Button wcButton3 = new Button();
-        wcButton3.setBackground(RecyclingImage);
-        wcButton3.setScaleX(0.4);
-        wcButton3.setScaleY(0.4);
-        wcButton3.setPrefSize(25,25);
-        wcButton3.setDefaultButton(true);
-        lobitosRecycleGridPane.add(wcButton3, 2, 4);
-        lobitosRecycleGridPane.setMargin(wcButton3, new Insets(25, 90,-25,-90));
+        Button recyleButton3 = new Button();
+        recyleButton3.setBackground(RecyclingImage);
+        recyleButton3.setScaleX(0.4);
+        recyleButton3.setScaleY(0.4);
+        recyleButton3.setPrefSize(25,25);
+        recyleButton3.setDefaultButton(true);
+        lobitosRecycleGridPane.add(recyleButton3, 2, 4);
+        lobitosRecycleGridPane.setMargin(recyleButton3, new Insets(25, 90,-25,-90));
 
 
         //////////////////////////////////////////////////
+
+        recyleButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+        });
+
+        recyleButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+        });
+
+        recyleButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+        });
+
+        /////////////////////////////////////////////////////
+
 
         wcButton.setOnAction(event -> {
             primaryStage.setTitle("SMART MAP - Lobitos Map");

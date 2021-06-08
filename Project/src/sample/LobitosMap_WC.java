@@ -6,6 +6,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -202,6 +203,37 @@ public class LobitosMap_WC extends Application {
 
 
         //////////////////////////////////////////////////
+
+        wcButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+        wcButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+        });
+
+
+        /////////////////////////////////////////////////////////////////////
 
         wcButton.setOnAction(event -> {
             primaryStage.setTitle("SMART MAP - Lobitos Map");
