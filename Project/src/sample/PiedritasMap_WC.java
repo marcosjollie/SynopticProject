@@ -124,7 +124,7 @@ public class PiedritasMap_WC extends Application {
         reportIssueButton.setDefaultButton(true);
         piedritasWCGridPane.add(reportIssueButton, 1, 10, 1, 1);
         piedritasWCGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -45,-135, 45));
+        piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
         ////////////////////////////////////////////////////////////////////////////
@@ -137,7 +137,7 @@ public class PiedritasMap_WC extends Application {
         wcButton1.setPrefSize(25,25);
         wcButton1.setDefaultButton(true);
         piedritasWCGridPane.add(wcButton1, 0, 4);
-        piedritasWCGridPane.setMargin(wcButton1, new Insets(-115, -100,115,100));
+        piedritasWCGridPane.setMargin(wcButton1, new Insets(-25, -328,25,328));
 
         Button wcButton2 = new Button();
         wcButton2.setBackground(WCImage);
@@ -146,16 +146,16 @@ public class PiedritasMap_WC extends Application {
         wcButton2.setPrefSize(25,25);
         wcButton2.setDefaultButton(true);
         piedritasWCGridPane.add(wcButton2, 1, 4);
-        piedritasWCGridPane.setMargin(wcButton2, new Insets(-20, -160,20,160));
+        piedritasWCGridPane.setMargin(wcButton2, new Insets(-260, -730,260,730));
 
-        Button wcButton3 = new Button();
-        wcButton3.setBackground(WCImage);
-        wcButton3.setScaleX(0.4);
-        wcButton3.setScaleY(0.4);
-        wcButton3.setPrefSize(25,25);
-        wcButton3.setDefaultButton(true);
-        piedritasWCGridPane.add(wcButton3, 2, 4);
-        piedritasWCGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
+//        Button wcButton3 = new Button();
+//        wcButton3.setBackground(WCImage);
+//        wcButton3.setScaleX(0.4);
+//        wcButton3.setScaleY(0.4);
+//        wcButton3.setPrefSize(25,25);
+//        wcButton3.setDefaultButton(true);
+//        piedritasWCGridPane.add(wcButton3, 2, 4);
+//        piedritasWCGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
 
         //////////////////////////////////////////////////////////////////////////////
 

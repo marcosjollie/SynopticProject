@@ -138,7 +138,7 @@ public class PiedritasMap_WasteBins extends Application {
         wcButton1.setPrefSize(25,25);
         wcButton1.setDefaultButton(true);
         piedritasWasteBinsGridPane.add(wcButton1, 0, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton1, new Insets(-115, -100,115,100));
+        piedritasWasteBinsGridPane.setMargin(wcButton1, new Insets(-70, -90,70,90));
 
         Button wcButton2 = new Button();
         wcButton2.setBackground(BinImage);
@@ -147,7 +147,7 @@ public class PiedritasMap_WasteBins extends Application {
         wcButton2.setPrefSize(25,25);
         wcButton2.setDefaultButton(true);
         piedritasWasteBinsGridPane.add(wcButton2, 1, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton2, new Insets(-20, -160,20,160));
+        piedritasWasteBinsGridPane.setMargin(wcButton2, new Insets(-34, -215,34,215));
 
         Button wcButton3 = new Button();
         wcButton3.setBackground(BinImage);
@@ -156,7 +156,53 @@ public class PiedritasMap_WasteBins extends Application {
         wcButton3.setPrefSize(25,25);
         wcButton3.setDefaultButton(true);
         piedritasWasteBinsGridPane.add(wcButton3, 2, 4);
-        piedritasWasteBinsGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
+        piedritasWasteBinsGridPane.setMargin(wcButton3, new Insets(-70, 525,70,-525));
+
+        Button wcButton4 = new Button();
+        wcButton4.setBackground(BinImage);
+        wcButton4.setScaleX(0.4);
+        wcButton4.setScaleY(0.4);
+        wcButton4.setPrefSize(25,25);
+        wcButton4.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wcButton4, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wcButton4, new Insets(-25, 473,25,-473));
+
+        Button wcButton5 = new Button();
+        wcButton5.setBackground(BinImage);
+        wcButton5.setScaleX(0.4);
+        wcButton5.setScaleY(0.4);
+        wcButton5.setPrefSize(25,25);
+        wcButton5.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wcButton5, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wcButton5, new Insets(-230, 345,230,-345));
+
+        Button wcButton6 = new Button();
+        wcButton6.setBackground(BinImage);
+        wcButton6.setScaleX(0.4);
+        wcButton6.setScaleY(0.4);
+        wcButton6.setPrefSize(25,25);
+        wcButton6.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wcButton6, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wcButton6, new Insets(-255, 35,255,-35));
+
+        Button wcButton7 = new Button();
+        wcButton7.setBackground(BinImage);
+        wcButton7.setScaleX(0.4);
+        wcButton7.setScaleY(0.4);
+        wcButton7.setPrefSize(25,25);
+        wcButton7.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wcButton7, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wcButton7, new Insets(-180, -10,180,10));
+
+        Button wcButton8 = new Button();
+        wcButton8.setBackground(BinImage);
+        wcButton8.setScaleX(0.4);
+        wcButton8.setScaleY(0.4);
+        wcButton8.setPrefSize(25,25);
+        wcButton8.setDefaultButton(true);
+        piedritasWasteBinsGridPane.add(wcButton8, 2, 4);
+        piedritasWasteBinsGridPane.setMargin(wcButton8, new Insets(-100, 10,100,-10));
+
 
         //////////////////////////////////////////////////////////////////////////////
 

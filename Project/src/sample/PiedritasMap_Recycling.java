@@ -125,7 +125,7 @@ public class PiedritasMap_Recycling extends Application {
         reportIssueButton.setDefaultButton(true);
         piedritasRecyclingGridPane.add(reportIssueButton, 1, 10, 1, 1);
         piedritasRecyclingGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        piedritasRecyclingGridPane.setMargin(reportIssueButton, new Insets(0, -45,-135, 45));
+        piedritasRecyclingGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
         ////////////////////////////////////////////////////////////////////////////
@@ -138,7 +138,7 @@ public class PiedritasMap_Recycling extends Application {
         wcButton1.setPrefSize(25,25);
         wcButton1.setDefaultButton(true);
         piedritasRecyclingGridPane.add(wcButton1, 0, 4);
-        piedritasRecyclingGridPane.setMargin(wcButton1, new Insets(-115, -100,115,100));
+        piedritasRecyclingGridPane.setMargin(wcButton1, new Insets(-60, -200,60,200));
 
         Button wcButton2 = new Button();
         wcButton2.setBackground(RecyclingImage);
@@ -147,16 +147,16 @@ public class PiedritasMap_Recycling extends Application {
         wcButton2.setPrefSize(25,25);
         wcButton2.setDefaultButton(true);
         piedritasRecyclingGridPane.add(wcButton2, 1, 4);
-        piedritasRecyclingGridPane.setMargin(wcButton2, new Insets(-20, -160,20,160));
+        piedritasRecyclingGridPane.setMargin(wcButton2, new Insets(-80, -765,80,765));
 
-        Button wcButton3 = new Button();
-        wcButton3.setBackground(RecyclingImage);
-        wcButton3.setScaleX(0.4);
-        wcButton3.setScaleY(0.4);
-        wcButton3.setPrefSize(25,25);
-        wcButton3.setDefaultButton(true);
-        piedritasRecyclingGridPane.add(wcButton3, 2, 4);
-        piedritasRecyclingGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
+//        Button wcButton3 = new Button();
+//        wcButton3.setBackground(RecyclingImage);
+//        wcButton3.setScaleX(0.4);
+//        wcButton3.setScaleY(0.4);
+//        wcButton3.setPrefSize(25,25);
+//        wcButton3.setDefaultButton(true);
+//        piedritasRecyclingGridPane.add(wcButton3, 2, 4);
+//        piedritasRecyclingGridPane.setMargin(wcButton3, new Insets(5, 400,-5,-400));
 
         //////////////////////////////////////////////////////////////////////////////
 
