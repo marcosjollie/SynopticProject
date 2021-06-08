@@ -165,8 +165,8 @@ public class Report_Spanish extends Application {
             public void handle(ActionEvent event) {
 
                 // Add Empty Field Alerts
-                if ((issueTypeBox.getValue()!="SFuga de aguas residuales" && issueTypeBox.getValue()!="Area of excess waste"&& issueTypeBox.getValue()!="Area of excess waste" )){
-                    HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Form Error!", "Please select Issue type"); }
+                if ((issueTypeBox.getValue()!="Fuga de aguas residuales" && issueTypeBox.getValue()!="Exceso de basura")){
+                    HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Form Error!", "Porfavor, elige el"); }
                 else if (descriptionField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
                         "Form Error!", "Please enter description"); }
                 else if (locationField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
