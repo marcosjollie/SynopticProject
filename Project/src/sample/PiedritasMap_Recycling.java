@@ -146,10 +146,10 @@ public class PiedritasMap_Recycling extends Application {
 
         // Set pop-up information for each point
         recyleButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+                piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: \nPariñas, 20810, Peru");
         });
         recyleButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+                piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: \nPariñas, 20810, Peru");
         });
 
 

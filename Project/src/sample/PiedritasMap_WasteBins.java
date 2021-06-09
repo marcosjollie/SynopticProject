@@ -200,35 +200,35 @@ public class PiedritasMap_WasteBins extends Application {
 
         // Set pop-up information for each point
         wasteBinsButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPariñas, 20810, Peru");
         });
 
         wasteBinsButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPariñas, 20810, Peru");
         });
 
         wasteBinsButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPariñas, 20810, Peru");
         });
 
         wasteBinsButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPanamericana Norte 18, Talara 20810, Peru");
         });
 
         wasteBinsButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nTalara, 20810, Peru");
         });
 
         wasteBinsButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nTalara, 20810, Peru");
         });
 
         wasteBinsButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPariñas, 20810, Peru");
         });
 
         wasteBinsButton8.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                piedritasWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: \nPariñas, 20810, Peru");
         });
 
 

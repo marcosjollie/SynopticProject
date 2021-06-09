@@ -144,10 +144,10 @@ public class PiedritasMap_WC extends Application {
 
         // Set pop-up information for each point
         wcButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location: \nPanamericana Norte 18, Talara 20810, Peru");
         });
         wcButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location: ");
+                piedritasWCGridPane.getScene().getWindow(), "Public Toilet", "Location:  \nPariñas, 20810, Peru");
         });
 
 
