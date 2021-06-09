@@ -21,6 +21,7 @@ import javafx.stage.Window;
 
 public class HomePage extends Application {
 
+    // Start function initializes the application
     @Override
     public void start(Stage primaryStage) {
         // Set stage title
