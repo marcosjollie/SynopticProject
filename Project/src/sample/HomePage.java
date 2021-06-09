@@ -114,47 +114,56 @@ public class HomePage extends Application {
 
 
         // Set action for pressed buttons
-        lobitosMapButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if(languageBox.getValue() == "English"){
-                    // Set stage title
-                    primaryStage.setTitle("SMART MAP - Lobitos Map");
-                    // Create the LobitosMap Page grid pane
-                    GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
-                    lobitosMapGridPane.setMaxSize( 800, 550);
-                    // Set background Image
-                    lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
-                    // Add UI controls to the LobitosMap form grid pane
-                    LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
-                    // Set the scene in AmpStart
-                    Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
-                    // Display stage
-                    primaryStage.setScene(LobitosMapScene);
-                    primaryStage.show();
-                }else{}
-            }
+        lobitosMapButton.setOnAction(event -> {
+            if(languageBox.getValue() == "English"){
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Lobitos Map");
+                // Create the LobitosMap Page grid pane
+                GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
+                lobitosMapGridPane.setMaxSize( 800, 550);
+                // Set background Image
+                lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
+                // Add UI controls to the LobitosMap form grid pane
+                LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+                // Set the scene in AmpStart
+                Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
+                // Display stage
+                primaryStage.setScene(LobitosMapScene);
+                primaryStage.show();
+            }else{}
         });
 
-        piedritasMapButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                if(languageBox.getValue() == "English"){
-                    // Set stage title
-                    primaryStage.setTitle("SMART MAP - Piedritas Map");
-                    // Create the PiedritasMap Page grid pane
-                    GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
-                    piedritasMapGridPane.setMaxSize( 950, 550);
-                    // Set background Image
-                    piedritasMapGridPane.setBackground(new Background( createImage("PiedritasMap.png")));
-                    // Add UI controls to the PiedritasMap form grid pane
-                    PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
-                    // Set the scene in PiedritasMap
-                    Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
-                    // Display PiedritasMap stage
-                    primaryStage.setScene(PiedritasMapScene);
-                    primaryStage.show();
-                }else{}
+        piedritasMapButton.setOnAction(actionEvent -> {
+            if(languageBox.getSelectionModel().getSelectedItem() == "Inglés"){
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Piedritas Map");
+                // Create the PiedritasMap Page grid pane
+                GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
+                piedritasMapGridPane.setMaxSize( 950, 550);
+                // Set background Image
+                piedritasMapGridPane.setBackground(new Background( HomePage.createImage("PiedritasMap.png")));
+                // Add UI controls to the PiedritasMap form grid pane
+                PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+                // Set the scene in PiedritasMap
+                Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+                // Display PiedritasMap stage
+                primaryStage.setScene(PiedritasMapScene);
+                primaryStage.show();
+            }else{
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Mapa de Piedritas");
+                // Create the Spanish PiedritasMap Page grid pane
+                GridPane piedritasMapGridPane = PiedritasMap_Spanish.createPiedritasMapGridPane();
+                piedritasMapGridPane.setMaxSize( 950, 550);
+                // Set background Image
+                piedritasMapGridPane.setBackground(new Background( HomePage.createImage("PiedritasMap.png")));
+                // Add UI controls to the Spanish PiedritasMap form grid pane
+                PiedritasMap_Spanish.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+                // Set the scene in Spanish PiedritasMap
+                Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+                // Display Spanish PiedritasMap stage
+                primaryStage.setScene(PiedritasMapScene);
+                primaryStage.show();
             }
         });
     }
