@@ -40,7 +40,7 @@ public class LobitosMap_Recylcing extends Application {
 
     // Create Grid Pane for LobitosRecycling
     public static GridPane createLobitosRecycleGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for LobitosRecycling
         GridPane lobitosRecycleGridPane = new GridPane();
         lobitosRecycleGridPane.setAlignment(Pos.CENTER);
         lobitosRecycleGridPane.setPadding(new Insets(0, 0, 0, 0));
@@ -49,7 +49,7 @@ public class LobitosMap_Recylcing extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return LobitosRecycling
         lobitosRecycleGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return lobitosRecycleGridPane;
     }

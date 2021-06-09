@@ -50,7 +50,7 @@ public class LobitosMap extends Application {
 
     // Create Grid Pane for LobitosMap
     public static GridPane createLobitosMapGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for LobitosMap
         GridPane lobitosMapGridPane = new GridPane();
         lobitosMapGridPane.setAlignment(Pos.CENTER);
         lobitosMapGridPane.setPadding(new Insets(0, 0, 0, 0));
@@ -59,7 +59,7 @@ public class LobitosMap extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return LobitosMap
         lobitosMapGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return lobitosMapGridPane;
     }
@@ -168,7 +168,6 @@ public class LobitosMap extends Application {
             primaryStage.show();
         });
 
-
         wasteBinsButton.setOnAction(event -> {
             // Set stage title
             primaryStage.setTitle("SMART MAP - Lobitos Map");
@@ -185,7 +184,6 @@ public class LobitosMap extends Application {
             primaryStage.setScene(LobitosWastBinsScene);
             primaryStage.show();
         });
-
 
         backButton.setOnAction(event -> {
             // Set stage title

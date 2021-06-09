@@ -41,7 +41,7 @@ public class LobitosMap_WC extends Application {
 
     // Create Grid Pane for LobitosWC
     public static GridPane createLobitosWCGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for LobitosWC
         GridPane lobitosWCGridPane = new GridPane();
         lobitosWCGridPane.setAlignment(Pos.CENTER);
         lobitosWCGridPane.setPadding(new Insets(0, 0, 0, 0));
@@ -50,7 +50,7 @@ public class LobitosMap_WC extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return LobitosWC
         lobitosWCGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return lobitosWCGridPane;
     }

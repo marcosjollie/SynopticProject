@@ -41,7 +41,7 @@ public class PiedritasMap_Recycling extends Application {
 
     // Create Grid Pane for PiedritasRecycle
     public static GridPane createPiedritasRecyclingGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for PiedritasRecycle
         GridPane piedritasRecycleGridPane = new GridPane();
         piedritasRecycleGridPane.setAlignment(Pos.CENTER);
         piedritasRecycleGridPane.setPadding(new Insets(25,25,25,25));
@@ -50,7 +50,7 @@ public class PiedritasMap_Recycling extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return PiedritasRecycle
         piedritasRecycleGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return piedritasRecycleGridPane;
     }

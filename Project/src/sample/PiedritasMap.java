@@ -43,7 +43,7 @@ public class PiedritasMap extends Application {
 
     // Create Grid Pane for PiedritasMap
     public static GridPane createPiedritasMapGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for PiedritasMap
         GridPane piedritasMapGridPane = new GridPane();
         piedritasMapGridPane.setAlignment(Pos.CENTER);
         piedritasMapGridPane.setPadding(new Insets(25,25,25,25));
@@ -52,7 +52,7 @@ public class PiedritasMap extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return PiedritasMapGridPane
         piedritasMapGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return piedritasMapGridPane;
     }

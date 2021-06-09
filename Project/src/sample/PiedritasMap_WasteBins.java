@@ -41,7 +41,7 @@ public class PiedritasMap_WasteBins extends Application {
 
     // Create Grid Pane for PiedritasWasteBins
     public static GridPane createPiedritasWasteBinsGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for PiedritasWasteBins
         GridPane piedritasWasteBinsGridPane = new GridPane();
         piedritasWasteBinsGridPane.setAlignment(Pos.CENTER);
         piedritasWasteBinsGridPane.setPadding(new Insets(25,25,25,25));
@@ -50,7 +50,7 @@ public class PiedritasMap_WasteBins extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return PiedritasWasteBinsGridPane
         piedritasWasteBinsGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return piedritasWasteBinsGridPane;
     }
