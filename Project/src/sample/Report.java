@@ -43,7 +43,7 @@ public class Report extends Application {
 
     // Create Grid Pane for Report
     public static GridPane createReportGridPane() {
-        // Set new Grid Pane for RegistrationPage
+        // Set new Grid Pane for Report
         GridPane reportGridPane = new GridPane();
         reportGridPane.setAlignment(Pos.CENTER);
         reportGridPane.setPadding(new Insets(80,220,80,160));
@@ -54,7 +54,7 @@ public class Report extends Application {
         columnOneConstraints.setHalignment(HPos.CENTER);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(100,100, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return registrationGridPane
+        // Return reportGridPane
         reportGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return reportGridPane;
     }
@@ -157,41 +157,37 @@ public class Report extends Application {
 
 
         // Set action for pressed buttons
-        submitButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
+        submitButton.setOnAction(event -> {
+            // Add Empty Field Alerts
+            if ((issueTypeBox.getValue()!="Sewage leak" && issueTypeBox.getValue()!="Area of excess waste"&& issueTypeBox.getValue()!="Area of excess waste" )){
+                HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Form Error!", "Please select Issue type"); }
+            else if (descriptionField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
+                    "Form Error!", "Please enter description"); }
+            else if (locationField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
+                    "Form Error!", "Please enter location"); }
+            else if (dateField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
+                    "Form Error!", "Please enter date"); }
 
-                // Add Empty Field Alerts
-                if ((issueTypeBox.getValue()!="Sewage leak" && issueTypeBox.getValue()!="Area of excess waste"&& issueTypeBox.getValue()!="Area of excess waste" )){
-                    HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(), "Form Error!", "Please select Issue type"); }
-                else if (descriptionField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter description"); }
-                else if (locationField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter location"); }
-                else if (dateField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter date"); }
-
-                else if (emailField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
-                        "Form Error!", "Please enter email"); }
+            else if (emailField.getText().isEmpty()) { HomePage.showAlert(Alert.AlertType.ERROR, reportGridPane.getScene().getWindow(),
+                    "Form Error!", "Please enter email"); }
 
 
-                else{
-                    String issueType_value = (String) issueTypeBox.getValue();
-                    String location_value = locationField.getText();
-                    String date_value = dateField.getText();
-                    String description_value = descriptionField.getText();
-                    String email_value = emailField.getText();
+            else{
+                String issueType_value = (String) issueTypeBox.getValue();
+                String location_value = locationField.getText();
+                String date_value = dateField.getText();
+                String description_value = descriptionField.getText();
+                String email_value = emailField.getText();
 //                    String activeLevel_value = null;
 
 
 
-                    HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
-                            "Submission Successful!", "Issue report has been sent.");
+                HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
+                        "Submission Successful!", "Issue report has been sent.");
 
 
 
 
-                }
             }
         });
 
