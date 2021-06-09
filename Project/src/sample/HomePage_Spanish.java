@@ -109,7 +109,7 @@ public class HomePage_Spanish extends Application {
         ChoiceBox languageBox = new ChoiceBox();
         languageBox.setMaxSize(100,30);
         languageBox.setValue("Español");
-        languageBox.getItems().add("Ingles");
+        languageBox.getItems().add("Inglés");
         languageBox.getItems().add("Español");
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
         homePageGridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));

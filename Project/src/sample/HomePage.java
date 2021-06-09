@@ -115,7 +115,7 @@ public class HomePage extends Application {
 
         // Set action for pressed buttons
         lobitosMapButton.setOnAction(event -> {
-            if(languageBox.getValue() == "English"){
+            if(languageBox.getSelectionModel().getSelectedItem() == "English"){
                 // Set stage title
                 primaryStage.setTitle("SMART MAP - Lobitos Map");
                 // Create the LobitosMap Page grid pane
@@ -125,16 +125,31 @@ public class HomePage extends Application {
                 lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
                 // Add UI controls to the LobitosMap form grid pane
                 LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
-                // Set the scene in AmpStart
+                // Set the scene in LobitosMap
                 Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
                 // Display stage
                 primaryStage.setScene(LobitosMapScene);
                 primaryStage.show();
-            }else{}
+            }else{
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+                // Create the Spanish LobitosMap Page grid pane
+                GridPane lobitosMapGridPane = LobitosMap_Spanish.createLobitosMapGridPane();
+                lobitosMapGridPane.setMaxSize( 800, 550);
+                // Set background Image
+                lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
+                // Add UI controls to the Spanish LobitosMap form grid pane
+                LobitosMap_Spanish.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+                // Set the scene in Spanish LobitosMap
+                Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
+                // Display stage
+                primaryStage.setScene(LobitosMapScene);
+                primaryStage.show();
+            }
         });
 
         piedritasMapButton.setOnAction(actionEvent -> {
-            if(languageBox.getSelectionModel().getSelectedItem() == "Inglés"){
+            if(languageBox.getSelectionModel().getSelectedItem() == "English"){
                 // Set stage title
                 primaryStage.setTitle("SMART MAP - Piedritas Map");
                 // Create the PiedritasMap Page grid pane
