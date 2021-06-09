@@ -24,10 +24,15 @@ public class HomePage_Spanish extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Set stage title
         primaryStage.setTitle("SMART MAP - Página Principal");
+        // Create the HomePage Page grid pane
         GridPane homePageGridPane = createHomePageGridPane();
+        // Set background colour
         homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+        // Add UI controls to the HomePage form grid pane
         addUIControlsHomePage(homePageGridPane, primaryStage);
+        // Set the scene in HomePage
         Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
         primaryStage.setScene(HomePageScene);
         primaryStage.show();
@@ -37,8 +42,7 @@ public class HomePage_Spanish extends Application {
 
 
 
-
-
+    // Create Grid Pane for Spanish HomePage
     public static GridPane createHomePageGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane homePageGridPane = new GridPane();
@@ -57,6 +61,7 @@ public class HomePage_Spanish extends Application {
         return homePageGridPane;
     }
 
+    // Create UI controls for Spanish HomePage Grid Pane
     public static void addUIControlsHomePage(GridPane homePageGridPane, Stage primaryStage) {
         // Add Title
         Label FxAppHeader = new Label("SmartMap");
@@ -110,16 +115,25 @@ public class HomePage_Spanish extends Application {
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
         homePageGridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
 
+
+
+        // Set action for pressed buttons
         lobitosMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if(languageBox.getSelectionModel().getSelectedItem() == "Ingles"){
+                    // Set stage title
                     primaryStage.setTitle("SMART MAP - Lobitos Map");
+                    // Create the LobitosMap Page grid pane
                     GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
                     lobitosMapGridPane.setMaxSize( 800, 550);
-                    lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
+                    // Set background Image
+                    lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
+                    // Add UI controls to the LobitosMap form grid pane
                     LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+                    // Set the scene in AmpStart
                     Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
+                    // Display stage
                     primaryStage.setScene(LobitosMapScene);
                     primaryStage.show();
                 }else{
@@ -128,8 +142,6 @@ public class HomePage_Spanish extends Application {
                 }
             }
         });
-
-
 
         piedritasMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

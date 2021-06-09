@@ -42,6 +42,7 @@ public class HomePage extends Application {
     public static void main(String[] args) { launch(args); }
 
 
+    // Create Grid Pane for HomePage
     public static GridPane createHomePageGridPane() {
         // Set new Grid Pane for HomePage
         GridPane homePageGridPane = new GridPane();
