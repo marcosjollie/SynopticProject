@@ -4,33 +4,34 @@ import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.geometry.Side;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class LobitosMap_WasteBins extends Application {
+public class LobitosMap_WasteBins_Spanish extends Application {
 
     // Start function for quick display
     @Override
     public void start(Stage primaryStage) {
         // Set stage title
-        primaryStage.setTitle("SMART MAP - Lobitos Map");
-        // Create the LobitosMap_WasteBins Page grid pane
+        primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+        // Create the Spanish LobitosMap_WasteBins Page grid pane
         GridPane lobitosWasteBinsGridPane = createLobitosWasteBinsGridPane();
         lobitosWasteBinsGridPane.setMaxSize( 800, 550);
         // Set background Image
         lobitosWasteBinsGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
-        // Add UI controls to the LobitosMap_WasteBins form grid pane
+        // Add UI controls to the Spanish LobitosMap_WasteBins form grid pane
         addUIControlsLobitosWasteBins(lobitosWasteBinsGridPane, primaryStage);
-        // Set the scene in LobitosMap_WasteBins
+        // Set the scene in Spanish LobitosMap_WasteBins
         Scene LobitosWastBinsScene = new Scene(lobitosWasteBinsGridPane, 800, 550);
-        // Display LobitosMap_WasteBins stage
+        // Display Spanish LobitosMap_WasteBins stage
         primaryStage.setScene(LobitosWastBinsScene);
         primaryStage.show();
     }
@@ -40,9 +41,9 @@ public class LobitosMap_WasteBins extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-    // Create Grid Pane for LobitosWasteBins
+    // Create Grid Pane for Spanish LobitosMap_WasteBins
     public static GridPane createLobitosWasteBinsGridPane() {
-        // Set new Grid Pane for LobitosWasteBins
+        // Set new Grid Pane for Spanish LobitosMap_WasteBins
         GridPane lobitosWastBinsGridPane = new GridPane();
         lobitosWastBinsGridPane.setAlignment(Pos.CENTER);
         lobitosWastBinsGridPane.setPadding(new Insets(0, 0, 0, 0));
@@ -51,7 +52,7 @@ public class LobitosMap_WasteBins extends Application {
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return LobitosWasteBins
+        // Return Spanish LobitosMap_WasteBins
         lobitosWastBinsGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return lobitosWastBinsGridPane;
     }
@@ -70,7 +71,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.add(wcButton, 0, 0);
         lobitosWasteBinsGridPane.setMargin(wcButton, new Insets(20, 35,0,-35));
         // Add WC Label
-        Label toiletsLabel = new Label("Public toilets");
+        Label toiletsLabel = new Label("Baños Públicos");
         toiletsLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(toiletsLabel, 1,0);
         lobitosWasteBinsGridPane.setMargin(toiletsLabel, new Insets(20, 35,0,-30));
@@ -85,7 +86,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.add(recyclingButton, 0, 1);
         lobitosWasteBinsGridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
         // Add Recycling Label
-        Label recyclingLabel = new Label("Recycling Points");
+        Label recyclingLabel = new Label("Puntos de Reciclaje");
         recyclingLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(recyclingLabel, 1,1);
         lobitosWasteBinsGridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
@@ -100,13 +101,13 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.add(wasteBinsButton, 0, 2);
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton, new Insets(0, 35,300,-35));
         // Add Waste Bins Label
-        Label wasteBinsLabel = new Label("Waste bins");
+        Label wasteBinsLabel = new Label("Cubos de Basura");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(wasteBinsLabel, 1,2);
         lobitosWasteBinsGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,300,-30));
 
         // Add Back Button
-        Button backButton = new Button("Back");
+        Button backButton = new Button("Atras");
         backButton.setFont(Font.font("Arial", 12));
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
@@ -115,13 +116,15 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(backButton, new Insets(0, -5,-95,5));
 
         // Add Report Issue Button
-        Button reportIssueButton = new Button("Report Issue");
+        Button reportIssueButton = new Button("Reportar Problema");
         reportIssueButton.setFont(Font.font("Arial", 12));
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(reportIssueButton, 1, 10, 1, 1);
         lobitosWasteBinsGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
         lobitosWasteBinsGridPane.setMargin(reportIssueButton, new Insets(0, -95,-95, 95));
+
+
 
 
         // Add Waste Bins Point Buttons
@@ -255,59 +258,59 @@ public class LobitosMap_WasteBins extends Application {
 
         // Set pop-up information for each point
         wasteBinsButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton8.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton9.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton10.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton11.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton12.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton13.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
         wasteBinsButton14.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Location: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
         });
 
 
@@ -315,49 +318,49 @@ public class LobitosMap_WasteBins extends Application {
         // Set action for pressed buttons
         wcButton.setOnAction(event -> {
             // Set stage title
-            primaryStage.setTitle("SMART MAP - Lobitos Map");
-            // Create the LobitosMap_WC Page grid pane
-            GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
+            primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+            // Create the Spanish LobitosMap_WC Page grid pane
+            GridPane lobitosWCGridPane = LobitosMap_WC_Spanish.createLobitosWCGridPane();
             lobitosWCGridPane.setMaxSize( 800, 550);
             // Set background Image
             lobitosWCGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
-            // Add UI controls to the LobitosMap_WC form grid pane
-            LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
-            // Set the scene in LobitosMap_WC
+            // Add UI controls to the Spanish LobitosMap_WC form grid pane
+            LobitosMap_WC_Spanish.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
+            // Set the scene in Spanish LobitosMap_WC
             Scene LobitosWCScene = new Scene(lobitosWCGridPane, 800, 550);
-            // Display LobitosMap_WC stage
+            // Display Spanish LobitosMap_WC stage
             primaryStage.setScene(LobitosWCScene);
             primaryStage.show();
         });
 
         recyclingButton.setOnAction(event -> {
             // Set stage title
-            primaryStage.setTitle("SMART MAP - Lobitos Map");
-            // Create the LobitosMap_Recylcing Page grid pane
-            GridPane lobitosRecycleGridPane = LobitosMap_Recylcing.createLobitosRecycleGridPane();
+            primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+            // Create the Spanish LobitosMap_Recylcing Page grid pane
+            GridPane lobitosRecycleGridPane = LobitosMap_Recylcing_Spanish.createLobitosRecycleGridPane();
             lobitosRecycleGridPane.setMaxSize( 800, 550);
             // Set background Image
             lobitosRecycleGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
-            // Add UI controls to the LobitosMap_Recylcing form grid pane
-            LobitosMap_Recylcing.addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
-            // Set the scene in LobitosMap_Recylcing
+            // Add UI controls to the Spanish LobitosMap_Recylcing form grid pane
+            LobitosMap_Recylcing_Spanish.addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
+            // Set the scene in Spanish LobitosMap_Recylcing
             Scene LobitosRecycleScene = new Scene(lobitosRecycleGridPane, 800, 550);
-            // Display stage
+            // Display Spanish LobitosMap_Recylcing stage
             primaryStage.setScene(LobitosRecycleScene);
             primaryStage.show();
         });
 
         wasteBinsButton.setOnAction(event -> {
             // Set stage title
-            primaryStage.setTitle("SMART MAP - Lobitos Map");
-            // Create the LobitosMap Page grid pane
-            GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
+            primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+            // Create the Spanish LobitosMap Page grid pane
+            GridPane lobitosMapGridPane = LobitosMap_Spanish.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
-            // Add UI controls to the LobitosMap form grid pane
-            LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
-            // Set the scene in AmpStart
+            lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
+            // Add UI controls to the Spanish LobitosMap form grid pane
+            LobitosMap_Spanish.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+            // Set the scene in Spanish LobitosMap
             Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
             // Display stage
             primaryStage.setScene(LobitosMapScene);
@@ -366,15 +369,15 @@ public class LobitosMap_WasteBins extends Application {
 
         backButton.setOnAction(event -> {
             // Set stage title
-            primaryStage.setTitle("SMART MAP - Lobitos Map");
-            // Create the LobitosMap Page grid pane
-            GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
+            primaryStage.setTitle("SMART MAP - Mapa de Lobitos");
+            // Create the Spanish LobitosMap Page grid pane
+            GridPane lobitosMapGridPane = LobitosMap_Spanish.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
-            // Add UI controls to the LobitosMap form grid pane
-            LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
-            // Set the scene in AmpStart
+            lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
+            // Add UI controls to the Spanish LobitosMap form grid pane
+            LobitosMap_Spanish.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+            // Set the scene in Spanish LobitosMap
             Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
             // Display stage
             primaryStage.setScene(LobitosMapScene);
@@ -383,16 +386,16 @@ public class LobitosMap_WasteBins extends Application {
 
         reportIssueButton.setOnAction(event -> {
             // Set stage title
-            primaryStage.setTitle("SMART MAP - Report Issue");
-            // Create the Report Page grid pane
-            GridPane reportPaneGridPane = Report.createReportGridPane();
+            primaryStage.setTitle("SMART MAP - Formulario de Problema");
+            // Create the Spanish Report Page grid pane
+            GridPane reportPaneGridPane = Report_Spanish.createReportGridPane();
             // Set background colour
             reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
-            // Add UI controls to the Report form grid pane
-            Report.addUIControlsReport(reportPaneGridPane, primaryStage);
-            // Set the scene in Report
+            // Add UI controls to the Spanish Report form grid pane
+            Report_Spanish.addUIControlsReport(reportPaneGridPane, primaryStage);
+            // Set the scene in Spanish Report
             Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
-            // Display Report stage
+            // Display Spanish Report stage
             primaryStage.setScene(reportScene);
             primaryStage.show();
         });
@@ -401,5 +404,6 @@ public class LobitosMap_WasteBins extends Application {
 
 
 }
+
 
 
