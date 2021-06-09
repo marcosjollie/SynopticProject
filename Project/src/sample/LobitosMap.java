@@ -20,19 +20,20 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-/*import javax.swing.text.html.ImageView;
-import java.awt.*;*/
 
 public class LobitosMap extends Application {
+
+    // Start function for quick display
     @Override
     public void start(Stage primaryStage) {
+        // Set stage title
         primaryStage.setTitle("SMART MAP - Lobitos Map");
-
-        // Create the AmpStart Page grid pane
+        // Create the LobitosMap Page grid pane
         GridPane lobitosMapGridPane = createLobitosMapGridPane();
         lobitosMapGridPane.setMaxSize( 800, 550);
+        // Set background Image
         lobitosMapGridPane.setBackground(new Background( createImage("LobitosMap.png")));
-        // Add UI controls to the AmpStart form grid pane
+        // Add UI controls to the LobitosMap form grid pane
         addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
         // Set the scene in AmpStart
         Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
@@ -150,56 +151,86 @@ public class LobitosMap extends Application {
 
 
         wcButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Lobitos Map");
+            // Create the LobitosMap_WC Page grid pane
             GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
             lobitosWCGridPane.setMaxSize( 800, 550);
+            // Set background Image
             lobitosWCGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            // Add UI controls to the LobitosMap_WC form grid pane
             LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
+            // Set the scene in LobitosMap_WC
             Scene LobitosWCScene = new Scene(lobitosWCGridPane, 800, 550);
+            // Display LobitosMap_WC stage
             primaryStage.setScene(LobitosWCScene);
             primaryStage.show();
         });
 
         recyclingButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Lobitos Map");
+            // Create the LobitosMap_Recylcing Page grid pane
             GridPane lobitosRecycleGridPane = LobitosMap_Recylcing.createLobitosRecycleGridPane();
             lobitosRecycleGridPane.setMaxSize( 800, 550);
-            lobitosRecycleGridPane.setBackground(new Background( createImage("LobitosMap.png")));
+            // Set background Image
+            lobitosRecycleGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            // Add UI controls to the LobitosMap_Recylcing form grid pane
             LobitosMap_Recylcing.addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
+            // Set the scene in LobitosMap_Recylcing
             Scene LobitosRecycleScene = new Scene(lobitosRecycleGridPane, 800, 550);
+            // Display stage
             primaryStage.setScene(LobitosRecycleScene);
             primaryStage.show();
         });
 
 
         wasteBinsButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Lobitos Map");
+            // Create the LobitosMap_WasteBins Page grid pane
             GridPane lobitosWasteBinsGridPane = LobitosMap_WasteBins.createLobitosWasteBinsGridPane();
             lobitosWasteBinsGridPane.setMaxSize( 800, 550);
+            // Set background Image
             lobitosWasteBinsGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+            // Add UI controls to the LobitosMap_WasteBins form grid pane
             LobitosMap_WasteBins.addUIControlsLobitosWasteBins(lobitosWasteBinsGridPane, primaryStage);
-            Scene LobitosWasteBinsScene = new Scene(lobitosWasteBinsGridPane, 800, 550);
-            primaryStage.setScene(LobitosWasteBinsScene);
+            // Set the scene in LobitosMap_WasteBins
+            Scene LobitosWastBinsScene = new Scene(lobitosWasteBinsGridPane, 800, 550);
+            // Display LobitosMap_WasteBins stage
+            primaryStage.setScene(LobitosWastBinsScene);
             primaryStage.show();
         });
 
 
         backButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Home Page");
+            // Create the HomePage Page grid pane
             GridPane homePageGridPane = HomePage.createHomePageGridPane();
+            // Set background colour
             homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+            // Add UI controls to the HomePage form grid pane
             HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
+            // Set the scene in HomePage
             Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
+            // Display HomePage stage
             primaryStage.setScene(HomePageScene);
             primaryStage.show();
         });
 
         reportIssueButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Report Issue");
+            // Create the Report Page grid pane
             GridPane reportPaneGridPane = Report.createReportGridPane();
+            // Set background colour
             reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+            // Add UI controls to the Report form grid pane
             Report.addUIControlsReport(reportPaneGridPane, primaryStage);
+            // Set the scene in Report
             Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+            // Display Report stage
             primaryStage.setScene(reportScene);
             primaryStage.show();
         });

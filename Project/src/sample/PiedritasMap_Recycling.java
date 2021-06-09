@@ -17,18 +17,21 @@ import javafx.stage.Stage;
 
 public class PiedritasMap_Recycling extends Application {
 
+    // Start function for quick display
     @Override
     public void start(Stage primaryStage) {
+        // Set stage title
         primaryStage.setTitle("SMART MAP - Piedritas Map");
-        // Create the AmpStart Page grid pane
+        // Create the PiedritasMap_Recycling Page grid pane
         GridPane piedritasRecycleGridPane = createPiedritasRecyclingGridPane();
         piedritasRecycleGridPane.setMaxSize( 950, 550);
+        // Set background Image
         piedritasRecycleGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
-        // Add UI controls to the AmpStart form grid pane
+        // Add UI controls to the PiedritasMap_Recycling form grid pane
         addUIControlsPiedritasRecyclingGridPane(piedritasRecycleGridPane, primaryStage);
-        // Set the scene in AmpStart
+        // Set the scene in PiedritasMap_Recycling
         Scene PiedritasRecyclingScene = new Scene(piedritasRecycleGridPane, 950, 550);
-        // Display stage
+        // Display PiedritasMap_Recycling stage
         primaryStage.setScene(PiedritasRecyclingScene);
         primaryStage.show();
     }
@@ -54,6 +57,7 @@ public class PiedritasMap_Recycling extends Application {
 
 
     public static void addUIControlsPiedritasRecyclingGridPane(GridPane piedritasRecycleGridPane, Stage primaryStage) {
+        // Add button images
         Background WCImage = new Background( PiedritasMap.createImage("WC.png"));
         Background RecyclingImage = new Background( PiedritasMap.createImage("Recycling.png"));
         Background BinImage = new Background( PiedritasMap.createImage("Bin.png"));
@@ -67,13 +71,11 @@ public class PiedritasMap_Recycling extends Application {
         wcButton.setDefaultButton(true);
         piedritasRecycleGridPane.add(wcButton, 0, 0);
         piedritasRecycleGridPane.setMargin(wcButton, new Insets(0, 60,0,-60));
-
-        // Add Toilets Label
+        // Add WC Label
         Label toiletsLabel = new Label("Public toilets");
         toiletsLabel.setFont(Font.font("Arial", 14));
         piedritasRecycleGridPane.add(toiletsLabel, 1,0);
         piedritasRecycleGridPane.setMargin(toiletsLabel, new Insets(0, 60,0,-55));
-
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -84,13 +86,11 @@ public class PiedritasMap_Recycling extends Application {
         recyclingButton.setDefaultButton(true);
         piedritasRecycleGridPane.add(recyclingButton, 0, 1);
         piedritasRecycleGridPane.setMargin(recyclingButton, new Insets(0, 60,0,-60));
-
         // Add Recycling Label
         Label recyclingLabel = new Label("Recycling Points");
         recyclingLabel.setFont(Font.font("Arial", 14));
         piedritasRecycleGridPane.add(recyclingLabel, 1,1);
         piedritasRecycleGridPane.setMargin(recyclingLabel, new Insets(0, 60,0,-55));
-
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -101,13 +101,11 @@ public class PiedritasMap_Recycling extends Application {
         wasteBinsButton.setDefaultButton(true);
         piedritasRecycleGridPane.add(wasteBinsButton, 0, 2);
         piedritasRecycleGridPane.setMargin(wasteBinsButton, new Insets(0, 60,280,-60));
-
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         piedritasRecycleGridPane.add(wasteBinsLabel, 1,2);
         piedritasRecycleGridPane.setMargin(wasteBinsLabel, new Insets(0, 60,280,-55));
-
 
         // Add Back Button
         Button backButton = new Button("Back");
@@ -117,7 +115,6 @@ public class PiedritasMap_Recycling extends Application {
         piedritasRecycleGridPane.add(backButton, 0, 10, 1, 1);
         piedritasRecycleGridPane.setHalignment(backButton, HPos.LEFT);
         piedritasRecycleGridPane.setMargin(backButton, new Insets(0, 20,-135,-20));
-
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Report Issue");
@@ -129,9 +126,7 @@ public class PiedritasMap_Recycling extends Application {
         piedritasRecycleGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
-        ////////////////////////////////////////////////////////////////////////////
-
-        // Add WC Button
+        // Add Recycle Point Buttons
         Button recyleButton1 = new Button();
         recyleButton1.setBackground(RecyclingImage);
         recyleButton1.setScaleX(0.4);
@@ -151,70 +146,97 @@ public class PiedritasMap_Recycling extends Application {
         piedritasRecycleGridPane.setMargin(recyleButton2, new Insets(-80, -765,80,765));
 
 
-        //////////////////////////////////////////////////////////////////////////////
-
+        // Set pop-up information for each point
         recyleButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
                 piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
         });
-
         recyleButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
                 piedritasRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
         });
 
-        /////////////////////////////////////////////////////
 
+
+        // Set action for pressed buttons
         wcButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Piedritas Map");
+            // Create the PiedritasMap_WC Page grid pane
             GridPane piedritasWCGridPane = PiedritasMap_WC.createPiedritasWCGridPane();
             piedritasWCGridPane.setMaxSize( 950, 550);
+            // Set background Image
             piedritasWCGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            // Add UI controls to the PiedritasMap_WC form grid pane
             PiedritasMap_WC.addUIControlsPiedritasWCGridPane(piedritasWCGridPane, primaryStage);
+            // Set the scene in PiedritasMap_WC
             Scene PiedritasWCScene = new Scene(piedritasWCGridPane, 950, 550);
+            // Display PiedritasMap_WC stage
             primaryStage.setScene(PiedritasWCScene);
             primaryStage.show();
         });
 
         recyclingButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Piedritas Map");
+            // Create the PiedritasMap Page grid pane
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
+            // Set background Image
             piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+            // Set the scene in PiedritasMap
             Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+            // Display PiedritasMap stage
             primaryStage.setScene(PiedritasMapScene);
             primaryStage.show();
         });
 
-
         wasteBinsButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Piedritas Map");
+            // Create the PiedritasMap_WasteBins Page grid pane
             GridPane piedritasWasteBinsGridPane = PiedritasMap_WasteBins.createPiedritasWasteBinsGridPane();
             piedritasWasteBinsGridPane.setMaxSize( 950, 550);
+            // Set background Image
             piedritasWasteBinsGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            // Add UI controls to the PiedritasMap_WasteBins form grid pane
             PiedritasMap_WasteBins.addUIControlsPiedritasWasteBinsGridPane(piedritasWasteBinsGridPane, primaryStage);
+            // Set the scene in PiedritasMap_WasteBins
             Scene PiedritasWasteBinsScene = new Scene(piedritasWasteBinsGridPane, 950, 550);
+            // Display PiedritasMap_WasteBins stage
             primaryStage.setScene(PiedritasWasteBinsScene);
             primaryStage.show();
         });
 
-
         backButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Piedritas Map");
+            // Create the PiedritasMap Page grid pane
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
+            // Set background Image
             piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+            // Set the scene in PiedritasMap
             Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+            // Display PiedritasMap stage
             primaryStage.setScene(PiedritasMapScene);
             primaryStage.show();
         });
 
         reportIssueButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Report Issue");
+            // Create the Report Page grid pane
             GridPane reportPaneGridPane = Report.createReportGridPane();
+            // Set background colour
             reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+            // Add UI controls to the Report form grid pane
             Report.addUIControlsReport(reportPaneGridPane, primaryStage);
+            // Set the scene in Report
             Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+            // Display Report stage
             primaryStage.setScene(reportScene);
             primaryStage.show();
         });

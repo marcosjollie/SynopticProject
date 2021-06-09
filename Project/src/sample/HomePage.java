@@ -24,28 +24,25 @@ public class HomePage extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Set stage title
         primaryStage.setTitle("SMART MAP - Home Page");
-
-        // Create the AmpStart Page grid pane
+        // Create the HomePage Page grid pane
         GridPane homePageGridPane = createHomePageGridPane();
+        // Set background colour
         homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
-        // Add UI controls to the AmpStart form grid pane
+        // Add UI controls to the HomePage form grid pane
         addUIControlsHomePage(homePageGridPane, primaryStage);
-        // Set the scene in AmpStart
+        // Set the scene in HomePage
         Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
-        // Display stage
+        // Display HomePage stage
         primaryStage.setScene(HomePageScene);
         primaryStage.show();
-
-
-
     }
+
     public static void main(String[] args) { launch(args); }
 
 
-//    static boolean LaguageIsEng(){
-//
-//    }
+
 
 
 
@@ -130,12 +127,18 @@ public class HomePage extends Application {
             @Override
             public void handle(ActionEvent event) {
                 if(languageBox.getValue() == "English"){
+                    // Set stage title
                     primaryStage.setTitle("SMART MAP - Lobitos Map");
+                    // Create the LobitosMap Page grid pane
                     GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
                     lobitosMapGridPane.setMaxSize( 800, 550);
-                    lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+                    // Set background Image
+                    lobitosMapGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+                    // Add UI controls to the LobitosMap form grid pane
                     LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
+                    // Set the scene in AmpStart
                     Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
+                    // Display stage
                     primaryStage.setScene(LobitosMapScene);
                     primaryStage.show();
                 }else{}
@@ -148,12 +151,18 @@ public class HomePage extends Application {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if(languageBox.getValue() == "English"){
+                    // Set stage title
                     primaryStage.setTitle("SMART MAP - Piedritas Map");
+                    // Create the PiedritasMap Page grid pane
                     GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
                     piedritasMapGridPane.setMaxSize( 950, 550);
+                    // Set background Image
                     piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+                    // Add UI controls to the PiedritasMap form grid pane
                     PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
+                    // Set the scene in PiedritasMap
                     Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
+                    // Display PiedritasMap stage
                     primaryStage.setScene(PiedritasMapScene);
                     primaryStage.show();
                 }else{}

@@ -16,27 +16,28 @@ import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import sample.HomePage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.regex.Pattern;
 
 public class Report extends Application {
 
+    // Start function for quick display
     @Override
     public void start(Stage primaryStage) {
+        // Set stage title
         primaryStage.setTitle("SMART MAP - Report Issue");
+        // Create the Report Page grid pane
         GridPane reportPaneGridPane = createReportGridPane();
+        // Set background colour
         reportPaneGridPane.setStyle("-fx-background-color: #4aa4ef");
+        // Add UI controls to the Report form grid pane
         addUIControlsReport(reportPaneGridPane, primaryStage);
+        // Set the scene in Report
         Scene reportScene = new Scene(reportPaneGridPane, 800, 500);
+        // Display Report stage
         primaryStage.setScene(reportScene);
-//        primaryStage.setWidth(800);
-//        primaryStage.setHeight(700);
         primaryStage.show();
     }
+
     public static void main(String[] args) { launch(args); }
 
 
@@ -147,10 +148,8 @@ public class Report extends Application {
         reportGridPane.setMargin(emailField, new Insets(0, 0,0,-15));
 
 
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////
+
         // Add Submit Button
         Button submitButton = new Button("Submit");
         submitButton.setPrefHeight(40);
@@ -208,12 +207,17 @@ public class Report extends Application {
 
 
         backButton.setOnAction(event -> {
+            // Set stage title
             primaryStage.setTitle("SMART MAP - Home Page");
-
+            // Create the HomePage Page grid pane
             GridPane homePageGridPane = HomePage.createHomePageGridPane();
+            // Set background colour
             homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+            // Add UI controls to the HomePage form grid pane
             HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
+            // Set the scene in HomePage
             Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
+            // Display HomePage stage
             primaryStage.setScene(HomePageScene);
             primaryStage.show();
         });
