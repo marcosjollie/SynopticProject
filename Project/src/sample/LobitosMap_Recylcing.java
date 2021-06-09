@@ -25,7 +25,7 @@ public class LobitosMap_Recylcing extends Application {
         GridPane lobitosRecycleGridPane = createLobitosRecycleGridPane();
         lobitosRecycleGridPane.setMaxSize( 800, 550);
         // Set background Image
-        lobitosRecycleGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+        lobitosRecycleGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
         // Add UI controls to the LobitosMap_Recylcing form grid pane
         addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
         // Set the scene in LobitosMap_Recylcing
@@ -35,10 +35,10 @@ public class LobitosMap_Recylcing extends Application {
         primaryStage.show();
     }
 
-
-
     public static void main(String[] args) { launch(args); }
 
+
+    // Create Grid Pane for LobitosRecycling
     public static GridPane createLobitosRecycleGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane lobitosRecycleGridPane = new GridPane();
@@ -55,16 +55,12 @@ public class LobitosMap_Recylcing extends Application {
     }
 
 
-
+    // Create UI controls for LobitosRecycling Grid Pane
     public static void addUIControlsLobitosRecycle(GridPane lobitosRecycleGridPane, Stage primaryStage) {
-        // Add button images
-        Background WCImage = new Background(LobitosMap.createImage("WC.png"));
-        Background RecyclingImage = new Background(LobitosMap.createImage("Recycling.png"));
-        Background BinImage = new Background(LobitosMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
-        wcButton.setBackground(WCImage);
+        wcButton.setBackground(HomePage.WCImage);
         wcButton.setScaleX(0.8);
         wcButton.setScaleY(0.8);
         wcButton.setPrefSize(25,25);
@@ -79,7 +75,7 @@ public class LobitosMap_Recylcing extends Application {
 
         // Add Recycling Button
         Button recyclingButton = new Button();
-        recyclingButton.setBackground(RecyclingImage);
+        recyclingButton.setBackground(HomePage.RecyclingImage);
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
         recyclingButton.setPrefSize(25,25);
@@ -94,7 +90,7 @@ public class LobitosMap_Recylcing extends Application {
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
-        wasteBinsButton.setBackground(BinImage);
+        wasteBinsButton.setBackground(HomePage.BinImage);
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
         wasteBinsButton.setPrefSize(25,25);
@@ -129,7 +125,7 @@ public class LobitosMap_Recylcing extends Application {
 
         // Add Recycle Point Buttons
         Button recyleButton1 = new Button();
-        recyleButton1.setBackground(RecyclingImage);
+        recyleButton1.setBackground(HomePage.RecyclingImage);
         recyleButton1.setScaleX(0.4);
         recyleButton1.setScaleY(0.4);
         recyleButton1.setPrefSize(25,25);
@@ -138,7 +134,7 @@ public class LobitosMap_Recylcing extends Application {
         lobitosRecycleGridPane.setMargin(recyleButton1, new Insets(-65, -245,65,245));
 
         Button recyleButton2 = new Button();
-        recyleButton2.setBackground(RecyclingImage);
+        recyleButton2.setBackground(HomePage.RecyclingImage);
         recyleButton2.setScaleX(0.4);
         recyleButton2.setScaleY(0.4);
         recyleButton2.setPrefSize(25,25);
@@ -147,7 +143,7 @@ public class LobitosMap_Recylcing extends Application {
         lobitosRecycleGridPane.setMargin(recyleButton2, new Insets(-52, -350,52,350));
 
         Button recyleButton3 = new Button();
-        recyleButton3.setBackground(RecyclingImage);
+        recyleButton3.setBackground(HomePage.RecyclingImage);
         recyleButton3.setScaleX(0.4);
         recyleButton3.setScaleY(0.4);
         recyleButton3.setPrefSize(25,25);
@@ -179,7 +175,7 @@ public class LobitosMap_Recylcing extends Application {
             GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
             lobitosWCGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosWCGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosWCGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap_WC form grid pane
             LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
             // Set the scene in LobitosMap_WC
@@ -196,7 +192,7 @@ public class LobitosMap_Recylcing extends Application {
             GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap form grid pane
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             // Set the scene in AmpStart
@@ -213,7 +209,7 @@ public class LobitosMap_Recylcing extends Application {
             GridPane lobitosWasteBinsGridPane = LobitosMap_WasteBins.createLobitosWasteBinsGridPane();
             lobitosWasteBinsGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosWasteBinsGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+            lobitosWasteBinsGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap_WasteBins form grid pane
             LobitosMap_WasteBins.addUIControlsLobitosWasteBins(lobitosWasteBinsGridPane, primaryStage);
             // Set the scene in LobitosMap_WasteBins
@@ -230,7 +226,7 @@ public class LobitosMap_Recylcing extends Application {
             GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap form grid pane
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             // Set the scene in AmpStart

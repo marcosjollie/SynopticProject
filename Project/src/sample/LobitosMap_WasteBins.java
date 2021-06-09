@@ -25,7 +25,7 @@ public class LobitosMap_WasteBins extends Application {
         GridPane lobitosWasteBinsGridPane = createLobitosWasteBinsGridPane();
         lobitosWasteBinsGridPane.setMaxSize( 800, 550);
         // Set background Image
-        lobitosWasteBinsGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+        lobitosWasteBinsGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
         // Add UI controls to the LobitosMap_WasteBins form grid pane
         addUIControlsLobitosWasteBins(lobitosWasteBinsGridPane, primaryStage);
         // Set the scene in LobitosMap_WasteBins
@@ -40,7 +40,7 @@ public class LobitosMap_WasteBins extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-
+    // Create Grid Pane for LobitosWasteBins
     public static GridPane createLobitosWasteBinsGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane lobitosWastBinsGridPane = new GridPane();
@@ -57,16 +57,12 @@ public class LobitosMap_WasteBins extends Application {
     }
 
 
-
+    // Create UI controls for LobitosWasteBins Grid Pane
     public static void addUIControlsLobitosWasteBins(GridPane lobitosWasteBinsGridPane, Stage primaryStage) {
-        // Add button images
-        Background WCImage = new Background(LobitosMap.createImage("WC.png"));
-        Background RecyclingImage = new Background(LobitosMap.createImage("Recycling.png"));
-        Background BinImage = new Background(LobitosMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
-        wcButton.setBackground(WCImage);
+        wcButton.setBackground(HomePage.WCImage);
         wcButton.setScaleX(0.8);
         wcButton.setScaleY(0.8);
         wcButton.setPrefSize(25,25);
@@ -81,7 +77,7 @@ public class LobitosMap_WasteBins extends Application {
 
         // Add Recycling Button
         Button recyclingButton = new Button();
-        recyclingButton.setBackground(RecyclingImage);
+        recyclingButton.setBackground(HomePage.RecyclingImage);
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
         recyclingButton.setPrefSize(25,25);
@@ -96,7 +92,7 @@ public class LobitosMap_WasteBins extends Application {
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
-        wasteBinsButton.setBackground(BinImage);
+        wasteBinsButton.setBackground(HomePage.BinImage);
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
         wasteBinsButton.setPrefSize(25,25);
@@ -132,7 +128,7 @@ public class LobitosMap_WasteBins extends Application {
 
         // Add Waste Bins Point Buttons
         Button wasteBinsButton1 = new Button();
-        wasteBinsButton1.setBackground(BinImage);
+        wasteBinsButton1.setBackground(HomePage.BinImage);
         wasteBinsButton1.setScaleX(0.4);
         wasteBinsButton1.setScaleY(0.4);
         wasteBinsButton1.setPrefSize(25,25);
@@ -141,7 +137,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton1, new Insets(35, 68,-35,-68));
 
         Button wasteBinsButton2 = new Button();
-        wasteBinsButton2.setBackground(BinImage);
+        wasteBinsButton2.setBackground(HomePage.BinImage);
         wasteBinsButton2.setScaleX(0.4);
         wasteBinsButton2.setScaleY(0.4);
         wasteBinsButton2.setPrefSize(25,25);
@@ -150,7 +146,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton2, new Insets(-5, 50,5,-50));
 
         Button wasteBinsButton3 = new Button();
-        wasteBinsButton3.setBackground(BinImage);
+        wasteBinsButton3.setBackground(HomePage.BinImage);
         wasteBinsButton3.setScaleX(0.4);
         wasteBinsButton3.setScaleY(0.4);
         wasteBinsButton3.setPrefSize(25,25);
@@ -159,7 +155,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton3, new Insets(-70, 520,70,-520));
 
         Button wasteBinsButton4 = new Button();
-        wasteBinsButton4.setBackground(BinImage);
+        wasteBinsButton4.setBackground(HomePage.BinImage);
         wasteBinsButton4.setScaleX(0.4);
         wasteBinsButton4.setScaleY(0.4);
         wasteBinsButton4.setPrefSize(25,25);
@@ -168,7 +164,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton4, new Insets(-60, 450,60,-450));
 
         Button wasteBinsButton5 = new Button();
-        wasteBinsButton5.setBackground(BinImage);
+        wasteBinsButton5.setBackground(HomePage.BinImage);
         wasteBinsButton5.setScaleX(0.4);
         wasteBinsButton5.setScaleY(0.4);
         wasteBinsButton5.setPrefSize(25,25);
@@ -177,7 +173,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton5, new Insets(25, 455,-25,-455));
 
         Button wasteBinsButton6 = new Button();
-        wasteBinsButton6.setBackground(BinImage);
+        wasteBinsButton6.setBackground(HomePage.BinImage);
         wasteBinsButton6.setScaleX(0.4);
         wasteBinsButton6.setScaleY(0.4);
         wasteBinsButton6.setPrefSize(25,25);
@@ -186,7 +182,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton6, new Insets(-65, 370,65,-370));
 
         Button wasteBinsButton7 = new Button();
-        wasteBinsButton7.setBackground(BinImage);
+        wasteBinsButton7.setBackground(HomePage.BinImage);
         wasteBinsButton7.setScaleX(0.4);
         wasteBinsButton7.setScaleY(0.4);
         wasteBinsButton7.setPrefSize(25,25);
@@ -195,7 +191,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton7, new Insets(-18, 275,18,-275));
 
         Button wasteBinsButton8 = new Button();
-        wasteBinsButton8.setBackground(BinImage);
+        wasteBinsButton8.setBackground(HomePage.BinImage);
         wasteBinsButton8.setScaleX(0.4);
         wasteBinsButton8.setScaleY(0.4);
         wasteBinsButton8.setPrefSize(25,25);
@@ -204,7 +200,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton8, new Insets(-200, 300,200,-300));
 
         Button wasteBinsButton9 = new Button();
-        wasteBinsButton9.setBackground(BinImage);
+        wasteBinsButton9.setBackground(HomePage.BinImage);
         wasteBinsButton9.setScaleX(0.4);
         wasteBinsButton9.setScaleY(0.4);
         wasteBinsButton9.setPrefSize(25,25);
@@ -213,7 +209,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton9, new Insets(-160, 295,160,-295));
 
         Button wasteBinsButton10 = new Button();
-        wasteBinsButton10.setBackground(BinImage);
+        wasteBinsButton10.setBackground(HomePage.BinImage);
         wasteBinsButton10.setScaleX(0.4);
         wasteBinsButton10.setScaleY(0.4);
         wasteBinsButton10.setPrefSize(25,25);
@@ -222,7 +218,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton10, new Insets(-145, 240,145,-240));
 
         Button wasteBinsButton11 = new Button();
-        wasteBinsButton11.setBackground(BinImage);
+        wasteBinsButton11.setBackground(HomePage.BinImage);
         wasteBinsButton11.setScaleX(0.4);
         wasteBinsButton11.setScaleY(0.4);
         wasteBinsButton11.setPrefSize(25,25);
@@ -231,7 +227,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton11, new Insets(-25, 100,25,-100));
 
         Button wasteBinsButton12 = new Button();
-        wasteBinsButton12.setBackground(BinImage);
+        wasteBinsButton12.setBackground(HomePage.BinImage);
         wasteBinsButton12.setScaleX(0.4);
         wasteBinsButton12.setScaleY(0.4);
         wasteBinsButton12.setPrefSize(25,25);
@@ -240,7 +236,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton12, new Insets(30, 100,-30,-100));
 
         Button wasteBinsButton13 = new Button();
-        wasteBinsButton13.setBackground(BinImage);
+        wasteBinsButton13.setBackground(HomePage.BinImage);
         wasteBinsButton13.setScaleX(0.4);
         wasteBinsButton13.setScaleY(0.4);
         wasteBinsButton13.setPrefSize(25,25);
@@ -249,7 +245,7 @@ public class LobitosMap_WasteBins extends Application {
         lobitosWasteBinsGridPane.setMargin(wasteBinsButton13, new Insets(-370, 155,370,-155));
 
         Button wasteBinsButton14 = new Button();
-        wasteBinsButton14.setBackground(BinImage);
+        wasteBinsButton14.setBackground(HomePage.BinImage);
         wasteBinsButton14.setScaleX(0.4);
         wasteBinsButton14.setScaleY(0.4);
         wasteBinsButton14.setPrefSize(25,25);
@@ -326,7 +322,7 @@ public class LobitosMap_WasteBins extends Application {
             GridPane lobitosWCGridPane = LobitosMap_WC.createLobitosWCGridPane();
             lobitosWCGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosWCGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosWCGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap_WC form grid pane
             LobitosMap_WC.addUIControlsLobitosWC(lobitosWCGridPane, primaryStage);
             // Set the scene in LobitosMap_WC
@@ -343,7 +339,7 @@ public class LobitosMap_WasteBins extends Application {
             GridPane lobitosRecycleGridPane = LobitosMap_Recylcing.createLobitosRecycleGridPane();
             lobitosRecycleGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosRecycleGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosRecycleGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap_Recylcing form grid pane
             LobitosMap_Recylcing.addUIControlsLobitosRecycle(lobitosRecycleGridPane, primaryStage);
             // Set the scene in LobitosMap_Recylcing
@@ -360,7 +356,7 @@ public class LobitosMap_WasteBins extends Application {
             GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap form grid pane
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             // Set the scene in AmpStart
@@ -377,7 +373,7 @@ public class LobitosMap_WasteBins extends Application {
             GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
             lobitosMapGridPane.setMaxSize( 800, 550);
             // Set background Image
-            lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+            lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
             // Add UI controls to the LobitosMap form grid pane
             LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
             // Set the scene in AmpStart

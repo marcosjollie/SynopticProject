@@ -7,12 +7,11 @@ import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.Side;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
@@ -42,34 +41,25 @@ public class HomePage extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-
-
-
-
-
-
-
-
-
-
     public static GridPane createHomePageGridPane() {
-        // Set new Grid Pane for LoginPage
+        // Set new Grid Pane for HomePage
         GridPane homePageGridPane = new GridPane();
         homePageGridPane.setAlignment(Pos.CENTER);
         homePageGridPane.setHgap(10);
         homePageGridPane.setVgap(10);
         homePageGridPane.setPadding(new Insets(25,25,25,25));
-//        loginGridPane.setPadding(new Insets(40, 40, 40, 40));
         // Add Column Constraints
         ColumnConstraints columnOneConstraints = new ColumnConstraints(100, 100, Double.MAX_VALUE);
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
-        // Return loginGridPane
+        // Return homePageGridPane
         homePageGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return homePageGridPane;
     }
 
+
+    // Create UI controls for HomePage Grid Pane
     public static void addUIControlsHomePage(GridPane homePageGridPane, Stage primaryStage) {
         // Add Title
         Label FxAppHeader = new Label("SmartMap");
@@ -84,7 +74,6 @@ public class HomePage extends Application {
         homePageGridPane.add(welcomeLabel, 0, 1, 2, 1);
         homePageGridPane.setHalignment(welcomeLabel, HPos.CENTER);
         homePageGridPane.setMargin(welcomeLabel, new Insets(20, 0, 20, 0));
-
 
         // Add Lobitos map Button
         Button lobitosMapButton = new Button("Lobitos map");
@@ -106,14 +95,12 @@ public class HomePage extends Application {
         homePageGridPane.setHalignment(piedritasMapButton, HPos.CENTER);
         homePageGridPane.setMargin(piedritasMapButton, new Insets(0, 0, 0, 0));
 
-
         // Add Language Label
         Label languageLabel = new Label("Language: ");
         languageLabel.setFont(Font.font("Arial", 14));
         homePageGridPane.add(languageLabel, 0,6);
         homePageGridPane.setHalignment(languageLabel, HPos.LEFT);
         homePageGridPane.setMargin(languageLabel, new Insets(0, 0,-190,0));
-
         // Add Laguage Box
         ChoiceBox languageBox = new ChoiceBox();
         languageBox.setMaxSize(100,30);
@@ -123,6 +110,8 @@ public class HomePage extends Application {
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
         homePageGridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
 
+
+        // Set action for pressed buttons
         lobitosMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -133,7 +122,7 @@ public class HomePage extends Application {
                     GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
                     lobitosMapGridPane.setMaxSize( 800, 550);
                     // Set background Image
-                    lobitosMapGridPane.setBackground(new Background( LobitosMap.createImage("LobitosMap.png")));
+                    lobitosMapGridPane.setBackground(new Background( HomePage.createImage("LobitosMap.png")));
                     // Add UI controls to the LobitosMap form grid pane
                     LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
                     // Set the scene in AmpStart
@@ -145,8 +134,6 @@ public class HomePage extends Application {
             }
         });
 
-
-
         piedritasMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -157,7 +144,7 @@ public class HomePage extends Application {
                     GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
                     piedritasMapGridPane.setMaxSize( 950, 550);
                     // Set background Image
-                    piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+                    piedritasMapGridPane.setBackground(new Background( createImage("PiedritasMap.png")));
                     // Add UI controls to the PiedritasMap form grid pane
                     PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
                     // Set the scene in PiedritasMap
@@ -170,6 +157,22 @@ public class HomePage extends Application {
         });
     }
 
+
+    // Create function to set background image for the map pages
+    static BackgroundImage createImage(String url) {
+        return new BackgroundImage(
+                new Image(url),
+                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT,
+                new BackgroundPosition(Side.LEFT, 0, true, Side.BOTTOM, 0, true),
+                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, false, true));
+    }
+
+    // Set button images
+    static Background WCImage = new Background( createImage("WC.png"));
+    static Background RecyclingImage = new Background( createImage("Recycling.png"));
+    static Background BinImage = new Background( createImage("Bin.png"));
+
+    // Set function for alerts and popups
     public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);

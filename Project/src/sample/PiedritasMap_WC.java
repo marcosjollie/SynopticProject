@@ -25,7 +25,7 @@ public class PiedritasMap_WC extends Application {
         GridPane piedritasWCGridPane = createPiedritasWCGridPane();
         piedritasWCGridPane.setMaxSize( 950, 550);
         // Set background Image
-        piedritasWCGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+        piedritasWCGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
         // Add UI controls to the PiedritasMap_WC form grid pane
         addUIControlsPiedritasWCGridPane(piedritasWCGridPane, primaryStage);
         // Set the scene in PiedritasMap_WC
@@ -38,7 +38,7 @@ public class PiedritasMap_WC extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-
+    // Create Grid Pane for PiedritasWC
     public static GridPane createPiedritasWCGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane piedritasWCGridPane = new GridPane();
@@ -55,15 +55,12 @@ public class PiedritasMap_WC extends Application {
     }
 
 
+    // Create UI controls for PiedritasWC Grid Pane
     public static void addUIControlsPiedritasWCGridPane(GridPane piedritasWCGridPane, Stage primaryStage) {
-        // Add button images
-        Background WCImage = new Background( PiedritasMap.createImage("WC.png"));
-        Background RecyclingImage = new Background( PiedritasMap.createImage("Recycling.png"));
-        Background BinImage = new Background( PiedritasMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
-        wcButton.setBackground(WCImage);
+        wcButton.setBackground(HomePage.WCImage);
         wcButton.setScaleX(0.8);
         wcButton.setScaleY(0.8);
         wcButton.setPrefSize(25,25);
@@ -80,7 +77,7 @@ public class PiedritasMap_WC extends Application {
         Button recyclingButton = new Button();
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
-        recyclingButton.setBackground(RecyclingImage);
+        recyclingButton.setBackground(HomePage.RecyclingImage);
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         piedritasWCGridPane.add(recyclingButton, 0, 1);
@@ -95,7 +92,7 @@ public class PiedritasMap_WC extends Application {
         Button wasteBinsButton = new Button();
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
-        wasteBinsButton.setBackground(BinImage);
+        wasteBinsButton.setBackground(HomePage.BinImage);
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         piedritasWCGridPane.add(wasteBinsButton, 0, 2);
@@ -125,10 +122,9 @@ public class PiedritasMap_WC extends Application {
         piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
-
         // Add WC Point Buttons
         Button wcButton1 = new Button();
-        wcButton1.setBackground(WCImage);
+        wcButton1.setBackground(HomePage.WCImage);
         wcButton1.setScaleX(0.4);
         wcButton1.setScaleY(0.4);
         wcButton1.setPrefSize(25,25);
@@ -137,7 +133,7 @@ public class PiedritasMap_WC extends Application {
         piedritasWCGridPane.setMargin(wcButton1, new Insets(-25, -328,25,328));
 
         Button wcButton2 = new Button();
-        wcButton2.setBackground(WCImage);
+        wcButton2.setBackground(HomePage.WCImage);
         wcButton2.setScaleX(0.4);
         wcButton2.setScaleY(0.4);
         wcButton2.setPrefSize(25,25);
@@ -163,7 +159,7 @@ public class PiedritasMap_WC extends Application {
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            piedritasMapGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
             // Set the scene in PiedritasMap
@@ -180,7 +176,7 @@ public class PiedritasMap_WC extends Application {
             GridPane piedritasRecycleGridPane = PiedritasMap_Recycling.createPiedritasRecyclingGridPane();
             piedritasRecycleGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasRecycleGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            piedritasRecycleGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap_Recycling form grid pane
             PiedritasMap_Recycling.addUIControlsPiedritasRecyclingGridPane(piedritasRecycleGridPane, primaryStage);
             // Set the scene in PiedritasMap_Recycling
@@ -197,7 +193,7 @@ public class PiedritasMap_WC extends Application {
             GridPane piedritasWasteBinsGridPane = PiedritasMap_WasteBins.createPiedritasWasteBinsGridPane();
             piedritasWasteBinsGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasWasteBinsGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            piedritasWasteBinsGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap_WasteBins form grid pane
             PiedritasMap_WasteBins.addUIControlsPiedritasWasteBinsGridPane(piedritasWasteBinsGridPane, primaryStage);
             // Set the scene in PiedritasMap_WasteBins
@@ -214,7 +210,7 @@ public class PiedritasMap_WC extends Application {
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            piedritasMapGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
             // Set the scene in PiedritasMap

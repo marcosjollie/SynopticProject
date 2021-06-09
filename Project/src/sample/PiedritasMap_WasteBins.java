@@ -26,7 +26,7 @@ public class PiedritasMap_WasteBins extends Application {
         GridPane piedritasWasteBinsGridPane = createPiedritasWasteBinsGridPane();
         piedritasWasteBinsGridPane.setMaxSize( 950, 550);
         // Set background Image
-        piedritasWasteBinsGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+        piedritasWasteBinsGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
         // Add UI controls to the PiedritasMap_WasteBins form grid pane
         addUIControlsPiedritasWasteBinsGridPane(piedritasWasteBinsGridPane, primaryStage);
         // Set the scene in PiedritasMap_WasteBins
@@ -39,7 +39,7 @@ public class PiedritasMap_WasteBins extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-
+    // Create Grid Pane for PiedritasWasteBins
     public static GridPane createPiedritasWasteBinsGridPane() {
         // Set new Grid Pane for LoginPage
         GridPane piedritasWasteBinsGridPane = new GridPane();
@@ -55,16 +55,12 @@ public class PiedritasMap_WasteBins extends Application {
         return piedritasWasteBinsGridPane;
     }
 
-
+    // Create UI controls for PiedritasWasteBins Grid Pane
     public static void addUIControlsPiedritasWasteBinsGridPane(GridPane piedritasWasteBinsGridPane, Stage primaryStage) {
-        // Add button images
-        Background WCImage = new Background( PiedritasMap.createImage("WC.png"));
-        Background RecyclingImage = new Background( PiedritasMap.createImage("Recycling.png"));
-        Background BinImage = new Background( PiedritasMap.createImage("Bin.png"));
 
         // Add WC Button
         Button wcButton = new Button();
-        wcButton.setBackground(WCImage);
+        wcButton.setBackground(HomePage.WCImage);
         wcButton.setScaleX(0.8);
         wcButton.setScaleY(0.8);
         wcButton.setPrefSize(25,25);
@@ -81,7 +77,7 @@ public class PiedritasMap_WasteBins extends Application {
         Button recyclingButton = new Button();
         recyclingButton.setScaleX(0.8);
         recyclingButton.setScaleY(0.8);
-        recyclingButton.setBackground(RecyclingImage);
+        recyclingButton.setBackground(HomePage.RecyclingImage);
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         piedritasWasteBinsGridPane.add(recyclingButton, 0, 1);
@@ -96,7 +92,7 @@ public class PiedritasMap_WasteBins extends Application {
         Button wasteBinsButton = new Button();
         wasteBinsButton.setScaleX(0.8);
         wasteBinsButton.setScaleY(0.8);
-        wasteBinsButton.setBackground(BinImage);
+        wasteBinsButton.setBackground(HomePage.BinImage);
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         piedritasWasteBinsGridPane.add(wasteBinsButton, 0, 2);
@@ -129,7 +125,7 @@ public class PiedritasMap_WasteBins extends Application {
 
         // Add Waste Bins Point Buttons
         Button wasteBinsButton1 = new Button();
-        wasteBinsButton1.setBackground(BinImage);
+        wasteBinsButton1.setBackground(HomePage.BinImage);
         wasteBinsButton1.setScaleX(0.4);
         wasteBinsButton1.setScaleY(0.4);
         wasteBinsButton1.setPrefSize(25,25);
@@ -138,7 +134,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton1, new Insets(-70, -90,70,90));
 
         Button wasteBinsButton2 = new Button();
-        wasteBinsButton2.setBackground(BinImage);
+        wasteBinsButton2.setBackground(HomePage.BinImage);
         wasteBinsButton2.setScaleX(0.4);
         wasteBinsButton2.setScaleY(0.4);
         wasteBinsButton2.setPrefSize(25,25);
@@ -147,7 +143,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton2, new Insets(-34, -215,34,215));
 
         Button wasteBinsButton3 = new Button();
-        wasteBinsButton3.setBackground(BinImage);
+        wasteBinsButton3.setBackground(HomePage.BinImage);
         wasteBinsButton3.setScaleX(0.4);
         wasteBinsButton3.setScaleY(0.4);
         wasteBinsButton3.setPrefSize(25,25);
@@ -156,7 +152,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton3, new Insets(-70, 525,70,-525));
 
         Button wasteBinsButton4 = new Button();
-        wasteBinsButton4.setBackground(BinImage);
+        wasteBinsButton4.setBackground(HomePage.BinImage);
         wasteBinsButton4.setScaleX(0.4);
         wasteBinsButton4.setScaleY(0.4);
         wasteBinsButton4.setPrefSize(25,25);
@@ -165,7 +161,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton4, new Insets(-25, 473,25,-473));
 
         Button wasteBinsButton5 = new Button();
-        wasteBinsButton5.setBackground(BinImage);
+        wasteBinsButton5.setBackground(HomePage.BinImage);
         wasteBinsButton5.setScaleX(0.4);
         wasteBinsButton5.setScaleY(0.4);
         wasteBinsButton5.setPrefSize(25,25);
@@ -174,7 +170,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton5, new Insets(-230, 345,230,-345));
 
         Button wasteBinsButton6 = new Button();
-        wasteBinsButton6.setBackground(BinImage);
+        wasteBinsButton6.setBackground(HomePage.BinImage);
         wasteBinsButton6.setScaleX(0.4);
         wasteBinsButton6.setScaleY(0.4);
         wasteBinsButton6.setPrefSize(25,25);
@@ -183,7 +179,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton6, new Insets(-255, 35,255,-35));
 
         Button wasteBinsButton7 = new Button();
-        wasteBinsButton7.setBackground(BinImage);
+        wasteBinsButton7.setBackground(HomePage.BinImage);
         wasteBinsButton7.setScaleX(0.4);
         wasteBinsButton7.setScaleY(0.4);
         wasteBinsButton7.setPrefSize(25,25);
@@ -192,7 +188,7 @@ public class PiedritasMap_WasteBins extends Application {
         piedritasWasteBinsGridPane.setMargin(wasteBinsButton7, new Insets(-180, -10,180,10));
 
         Button wasteBinsButton8 = new Button();
-        wasteBinsButton8.setBackground(BinImage);
+        wasteBinsButton8.setBackground(HomePage.BinImage);
         wasteBinsButton8.setScaleX(0.4);
         wasteBinsButton8.setScaleY(0.4);
         wasteBinsButton8.setPrefSize(25,25);
@@ -246,7 +242,7 @@ public class PiedritasMap_WasteBins extends Application {
             GridPane piedritasWCGridPane = PiedritasMap_WC.createPiedritasWCGridPane();
             piedritasWCGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasWCGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            piedritasWCGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap_WC form grid pane
             PiedritasMap_WC.addUIControlsPiedritasWCGridPane(piedritasWCGridPane, primaryStage);
             // Set the scene in PiedritasMap_WC
@@ -263,7 +259,7 @@ public class PiedritasMap_WasteBins extends Application {
             GridPane piedritasRecycleGridPane = PiedritasMap_Recycling.createPiedritasRecyclingGridPane();
             piedritasRecycleGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasRecycleGridPane.setBackground(new Background(LobitosMap.createImage("PiedritasMap.png")));
+            piedritasRecycleGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap_Recycling form grid pane
             PiedritasMap_Recycling.addUIControlsPiedritasRecyclingGridPane(piedritasRecycleGridPane, primaryStage);
             // Set the scene in PiedritasMap_Recycling
@@ -280,7 +276,7 @@ public class PiedritasMap_WasteBins extends Application {
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            piedritasMapGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
             // Set the scene in PiedritasMap
@@ -297,7 +293,7 @@ public class PiedritasMap_WasteBins extends Application {
             GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
             piedritasMapGridPane.setMaxSize( 950, 550);
             // Set background Image
-            piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+            piedritasMapGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
             // Add UI controls to the PiedritasMap form grid pane
             PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
             // Set the scene in PiedritasMap

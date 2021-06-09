@@ -117,7 +117,7 @@ public class HomePage_Spanish extends Application {
                     primaryStage.setTitle("SMART MAP - Lobitos Map");
                     GridPane lobitosMapGridPane = LobitosMap.createLobitosMapGridPane();
                     lobitosMapGridPane.setMaxSize( 800, 550);
-                    lobitosMapGridPane.setBackground(new Background(LobitosMap.createImage("LobitosMap.png")));
+                    lobitosMapGridPane.setBackground(new Background(HomePage.createImage("LobitosMap.png")));
                     LobitosMap.addUIControlsLobitosMap(lobitosMapGridPane, primaryStage);
                     Scene LobitosMapScene = new Scene(lobitosMapGridPane, 800, 550);
                     primaryStage.setScene(LobitosMapScene);
@@ -138,7 +138,7 @@ public class HomePage_Spanish extends Application {
                     primaryStage.setTitle("SMART MAP - Piedritas Map");
                     GridPane piedritasMapGridPane = PiedritasMap.createPiedritasMapGridPane();
                     piedritasMapGridPane.setMaxSize( 950, 550);
-                    piedritasMapGridPane.setBackground(new Background( LobitosMap.createImage("PiedritasMap.png")));
+                    piedritasMapGridPane.setBackground(new Background(HomePage.createImage("PiedritasMap.png")));
                     PiedritasMap.addUIControlsPiedritasMap(piedritasMapGridPane, primaryStage);
                     Scene PiedritasMapScene = new Scene(piedritasMapGridPane, 950, 550);
                     primaryStage.setScene(PiedritasMapScene);

@@ -41,8 +41,7 @@ public class Report extends Application {
     public static void main(String[] args) { launch(args); }
 
 
-
-
+    // Create Grid Pane for Report
     public static GridPane createReportGridPane() {
         // Set new Grid Pane for RegistrationPage
         GridPane reportGridPane = new GridPane();
@@ -56,24 +55,19 @@ public class Report extends Application {
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(100,100, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
         // Return registrationGridPane
-
         reportGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
         return reportGridPane;
     }
 
 
-
-
-
+    // Create UI controls for Report Grid Pane
     public static void addUIControlsReport(GridPane reportGridPane, Stage primaryStage) {
-
         // Add Header
         Label headerLabel = new Label("Report Form");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         reportGridPane.add(headerLabel, 0,0,2,1);
         reportGridPane.setHalignment(headerLabel, HPos.CENTER);
         reportGridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
-
 
         // Add Issue Type Label
         Label issueTypeLabel = new Label("Issue Type: ");
@@ -91,7 +85,6 @@ public class Report extends Application {
         reportGridPane.add(issueTypeBox,1,1);
         reportGridPane.setMargin(issueTypeBox, new Insets(0, 0,0,-15));
 
-
         // Add Location Label
         Label locationLabel = new Label("Location: ");
         locationLabel.setFont(Font.font("Arial", 14));
@@ -104,7 +97,6 @@ public class Report extends Application {
         locationField.setMaxSize(200,30);
         reportGridPane.add(locationField, 1,2);
         reportGridPane.setMargin(locationField, new Insets(0, 0,0,-15));
-
 
         // Add Date Label
         Label dateLabel = new Label("Date: ");
@@ -119,7 +111,6 @@ public class Report extends Application {
         reportGridPane.add(dateField, 1,3);
         reportGridPane.setMargin(dateField, new Insets(0, 0,0,-15));
 
-
         // Add Description Label
         Label descriptionLabel = new Label("Description: ");
         descriptionLabel.setFont(Font.font("Arial", 14));
@@ -132,7 +123,6 @@ public class Report extends Application {
         descriptionField.setMaxSize(200,30);
         reportGridPane.add(descriptionField, 1,4);
         reportGridPane.setMargin(descriptionField, new Insets(0, 0,0,-15));
-
 
         // Add Email Label
         Label emailLabel = new Label("Email: ");
@@ -147,8 +137,6 @@ public class Report extends Application {
         reportGridPane.add(emailField, 1, 5);
         reportGridPane.setMargin(emailField, new Insets(0, 0,0,-15));
 
-
-//////////////////////////////////////////////////////////////////////////////////////
 
         // Add Submit Button
         Button submitButton = new Button("Submit");
@@ -167,6 +155,8 @@ public class Report extends Application {
         reportGridPane.setHalignment(backButton, HPos.LEFT);
         reportGridPane.setMargin(backButton, new Insets(20, 0,20,0));
 
+
+        // Set action for pressed buttons
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -204,7 +194,6 @@ public class Report extends Application {
                 }
             }
         });
-
 
         backButton.setOnAction(event -> {
             // Set stage title
