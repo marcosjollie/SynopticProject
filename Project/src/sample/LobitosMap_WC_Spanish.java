@@ -189,31 +189,31 @@ public class LobitosMap_WC_Spanish extends Application {
 
         // Set pop-up information for each point
         wcButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Baños Públicos", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nCalle La Punta, Lobitos, 20820, Peru");
         });
 
         wcButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Baños Públicos", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nUnnamed Road, Lobitos 20820, Peru");
         });
 
         wcButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Baños Públicos", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         wcButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Baños Públicos", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         wcButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Baños Públicos", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nPueb Lobitos, Lobitos District, Peru");
         });
 
         wcButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nPueb Lobitos, Lobitos District, Peru");
         });
 
         wcButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: ");
+                lobitosWCGridPane.getScene().getWindow(), "Public Toilet", "Ubicación: \nLobitos District, 20820, Peru");
         });
 
 

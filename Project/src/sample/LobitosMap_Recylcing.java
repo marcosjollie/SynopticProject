@@ -155,15 +155,15 @@ public class LobitosMap_Recylcing extends Application {
 
         // Set pop-up information for each point
         recyleButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         recyleButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         recyleButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: ");
+                lobitosRecycleGridPane.getScene().getWindow(), "Recycle Point", "Location: \nLobitos, 20820, Peru");
         });
 
 

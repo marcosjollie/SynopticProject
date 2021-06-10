@@ -258,59 +258,59 @@ public class LobitosMap_WasteBins_Spanish extends Application {
 
         // Set pop-up information for each point
         wasteBinsButton1.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos District, Peru");
         });
 
         wasteBinsButton2.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nBaterias #5, Av, Lobitos, Peru");
         });
 
         wasteBinsButton3.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos, 20820, Peru");
         });
 
         wasteBinsButton4.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos District, 20820, Peru");
         });
 
         wasteBinsButton5.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         wasteBinsButton6.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         wasteBinsButton7.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, Lobitos District, Peru");
         });
 
         wasteBinsButton8.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos, 20820, Peru");
         });
 
         wasteBinsButton9.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, Lobitos District 20820, Peru");
         });
 
         wasteBinsButton10.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos, 20820, Peru");
         });
 
         wasteBinsButton11.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, 20820, Peru");
         });
 
         wasteBinsButton12.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nPueb Lobitos, 20820, Peru");
         });
 
         wasteBinsButton13.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos, 20820, Peru");
         });
 
         wasteBinsButton14.setOnAction(event -> { HomePage.showAlert(Alert.AlertType.INFORMATION,
-                lobitosWasteBinsGridPane.getScene().getWindow(), "Cubo de Basura", "Ubicación: ");
+                lobitosWasteBinsGridPane.getScene().getWindow(), "Waste Bin", "Ubicación: \nLobitos, 20820, Peru");
         });
 
 
