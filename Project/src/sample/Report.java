@@ -18,10 +18,10 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 
-public class Report extends Application {
+public abstract class Report extends Application {
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Report Issue");
@@ -37,8 +37,7 @@ public class Report extends Application {
         primaryStage.setScene(reportScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
     // Create Grid Pane for Report

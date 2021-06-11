@@ -14,10 +14,10 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class PiedritasMap_WC extends Application {
+public abstract class PiedritasMap_WC /*extends Application*/ {
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Piedritas Map");
@@ -34,8 +34,7 @@ public class PiedritasMap_WC extends Application {
         primaryStage.setScene(PiedritasWCScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
     // Create Grid Pane for PiedritasWC

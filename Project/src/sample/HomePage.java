@@ -112,8 +112,33 @@ public class HomePage extends Application {
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
         GridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
 
+        // Add Set Language Button
+        Button setLanguageButton = new Button("Set Language");
+        setLanguageButton.setFont(Font.font("Arial",10));
+        setLanguageButton.setPrefHeight(23);
+        setLanguageButton.setPrefWidth(80);
+        setLanguageButton.setDefaultButton(true);
+        homePageGridPane.add(setLanguageButton, 2, 6, 2, 1);
+        GridPane.setMargin(setLanguageButton, new Insets(0, 0, -195, -525));
 
         // Set action for pressed buttons
+        setLanguageButton.setOnAction(event -> {
+            if(languageBox.getSelectionModel().getSelectedItem() == "Spanish"){
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Página Principal");
+                // Create the HomePage Page grid pane
+                GridPane homePageGridPaneSpanish = HomePage_Spanish.createhomePageGridPaneSpanish();
+                // Set background colour
+                homePageGridPaneSpanish.setStyle("-fx-background-color: #4aa4ef");
+                // Add UI controls to the HomePage form grid pane
+                HomePage_Spanish.addUIControlsHomePageSpanish(homePageGridPaneSpanish, primaryStage);
+                // Set the scene in HomePage
+                Scene homePageGridPaneSpanishScene = new Scene(homePageGridPaneSpanish, 800, 500);
+                primaryStage.setScene(homePageGridPaneSpanishScene);
+                primaryStage.show();
+            }
+        });
+
         lobitosMapButton.setOnAction(event -> {
             if(languageBox.getSelectionModel().getSelectedItem() == "English"){
                 // Set stage title

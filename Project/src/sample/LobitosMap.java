@@ -21,10 +21,10 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 
-public class LobitosMap extends Application {
+public abstract class LobitosMap extends Application {
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Lobitos Map");
@@ -41,8 +41,7 @@ public class LobitosMap extends Application {
         primaryStage.setScene(LobitosMapScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
 

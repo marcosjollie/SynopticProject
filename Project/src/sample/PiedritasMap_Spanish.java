@@ -14,10 +14,10 @@ import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class PiedritasMap_Spanish extends Application {
+public abstract class PiedritasMap_Spanish extends Application {
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Mapa de Piedritas");
@@ -34,8 +34,7 @@ public class PiedritasMap_Spanish extends Application {
         primaryStage.setScene(PiedritasMapScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
 
@@ -180,14 +179,14 @@ public class PiedritasMap_Spanish extends Application {
             // Set stage title
             primaryStage.setTitle("SMART MAP - Página Principal");
             // Create the HomePage Page grid pane
-            GridPane homePageGridPane = HomePage_Spanish.createHomePageGridPane();
+            GridPane homePageGridPaneSpanish = HomePage_Spanish.createhomePageGridPaneSpanish();
             // Set background colour
-            homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+            homePageGridPaneSpanish.setStyle("-fx-background-color: #4aa4ef");
             // Add UI controls to the HomePage form grid pane
-            HomePage_Spanish.addUIControlsHomePage(homePageGridPane, primaryStage);
+            HomePage_Spanish.addUIControlsHomePageSpanish(homePageGridPaneSpanish, primaryStage);
             // Set the scene in HomePage
-            Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
-            primaryStage.setScene(HomePageScene);
+            Scene homePageGridPaneSpanishScene = new Scene(homePageGridPaneSpanish, 800, 500);
+            primaryStage.setScene(homePageGridPaneSpanishScene);
             primaryStage.show();
         });
 

@@ -20,59 +20,58 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class HomePage_Spanish extends Application {
+public abstract class HomePage_Spanish extends Application {
 
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Página Principal");
         // Create the HomePage Page grid pane
-        GridPane homePageGridPane = createHomePageGridPane();
+        GridPane homePageGridPaneSpanish = createhomePageGridPaneSpanish();
         // Set background colour
-        homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+        homePageGridPaneSpanish.setStyle("-fx-background-color: #4aa4ef");
         // Add UI controls to the HomePage form grid pane
-        addUIControlsHomePage(homePageGridPane, primaryStage);
+        addUIControlsHomePageSpanish(homePageGridPaneSpanish, primaryStage);
         // Set the scene in HomePage
-        Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
-        primaryStage.setScene(HomePageScene);
+        Scene homePageGridPaneSpanishScene = new Scene(homePageGridPaneSpanish, 800, 500);
+        primaryStage.setScene(homePageGridPaneSpanishScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
 
     // Create Grid Pane for Spanish HomePage
-    public static GridPane createHomePageGridPane() {
+    public static GridPane createhomePageGridPaneSpanish() {
         // Set new Grid Pane for Spanish HomePage
-        GridPane homePageGridPane = new GridPane();
-        homePageGridPane.setAlignment(Pos.CENTER);
-        homePageGridPane.setHgap(10);
-        homePageGridPane.setVgap(10);
-        homePageGridPane.setPadding(new Insets(25,25,25,25));
+        GridPane homePageGridPaneSpanish = new GridPane();
+        homePageGridPaneSpanish.setAlignment(Pos.CENTER);
+        homePageGridPaneSpanish.setHgap(10);
+        homePageGridPaneSpanish.setVgap(10);
+        homePageGridPaneSpanish.setPadding(new Insets(25,25,25,25));
         // Add Column Constraints
         ColumnConstraints columnOneConstraints = new ColumnConstraints(100, 100, Double.MAX_VALUE);
         columnOneConstraints.setHalignment(HPos.RIGHT);
         ColumnConstraints columnTwoConstrains = new ColumnConstraints(200,200, Double.MAX_VALUE);
         columnTwoConstrains.setHgrow(Priority.ALWAYS);
         // Return Spanish HomePage
-        homePageGridPane.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
-        return homePageGridPane;
+        homePageGridPaneSpanish.getColumnConstraints().addAll(columnOneConstraints, columnTwoConstrains);
+        return homePageGridPaneSpanish;
     }
 
     // Create UI controls for Spanish HomePage Grid Pane
-    public static void addUIControlsHomePage(GridPane homePageGridPane, Stage primaryStage) {
+    public static void addUIControlsHomePageSpanish(GridPane homePageGridPaneSpanish, Stage primaryStage) {
         // Add Title
         Label FxAppHeader = new Label("SmartMap");
         FxAppHeader.setFont(Font.font("Arial", FontWeight.BOLD, 30));
-        homePageGridPane.add(FxAppHeader, 0, 0, 2, 1);
+        homePageGridPaneSpanish.add(FxAppHeader, 0, 0, 2, 1);
         GridPane.setHalignment(FxAppHeader, HPos.CENTER);
         GridPane.setMargin(FxAppHeader, new Insets(20, 0, 20, 0));
 
         // Add Welcome label
         Label welcomeLabel = new Label("Bienvenido");
         welcomeLabel.setFont(Font.font("Arial", 24));
-        homePageGridPane.add(welcomeLabel, 0, 1, 2, 1);
+        homePageGridPaneSpanish.add(welcomeLabel, 0, 1, 2, 1);
         GridPane.setHalignment(welcomeLabel, HPos.CENTER);
         GridPane.setMargin(welcomeLabel, new Insets(20, 0, 20, 0));
 
@@ -83,7 +82,7 @@ public class HomePage_Spanish extends Application {
         lobitosMapButton.setPrefHeight(30);
         lobitosMapButton.setPrefWidth(150);
         lobitosMapButton.setDefaultButton(true);
-        homePageGridPane.add(lobitosMapButton, 0, 2, 2, 1);
+        homePageGridPaneSpanish.add(lobitosMapButton, 0, 2, 2, 1);
         GridPane.setHalignment(lobitosMapButton, HPos.CENTER);
         GridPane.setMargin(lobitosMapButton, new Insets(0, 0, 0, 0));
 
@@ -93,7 +92,7 @@ public class HomePage_Spanish extends Application {
         piedritasMapButton.setPrefHeight(30);
         piedritasMapButton.setPrefWidth(150);
         piedritasMapButton.setDefaultButton(true);
-        homePageGridPane.add(piedritasMapButton, 0, 3, 2, 1);
+        homePageGridPaneSpanish.add(piedritasMapButton, 0, 3, 2, 1);
         GridPane.setHalignment(piedritasMapButton, HPos.CENTER);
         GridPane.setMargin(piedritasMapButton, new Insets(0, 0, 0, 0));
 
@@ -101,7 +100,7 @@ public class HomePage_Spanish extends Application {
         // Add Language Label
         Label languageLabel = new Label("Idioma: ");
         languageLabel.setFont(Font.font("Arial", 14));
-        homePageGridPane.add(languageLabel, 0,6);
+        homePageGridPaneSpanish.add(languageLabel, 0,6);
         GridPane.setHalignment(languageLabel, HPos.LEFT);
         GridPane.setMargin(languageLabel, new Insets(0, 0,-190,0));
 
@@ -111,12 +110,42 @@ public class HomePage_Spanish extends Application {
         languageBox.setValue("Español");
         languageBox.getItems().add("Inglés");
         languageBox.getItems().add("Español");
-        homePageGridPane.add(languageBox, 1, 6, 2, 1);
+        homePageGridPaneSpanish.add(languageBox, 1, 6, 2, 1);
         GridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
+
+
+        // Add Set Language Button
+        Button setLanguageButton = new Button("Cambiar Idioma");
+        setLanguageButton.setFont(Font.font("Arial",10));
+        setLanguageButton.setPrefHeight(23);
+        setLanguageButton.setPrefWidth(85);
+        setLanguageButton.setDefaultButton(true);
+        homePageGridPaneSpanish.add(setLanguageButton, 2, 6, 2, 1);
+        GridPane.setMargin(setLanguageButton, new Insets(0, 0, -195, -525));
+
 
 
 
         // Set action for pressed buttons
+        setLanguageButton.setOnAction(event -> {
+            if(languageBox.getSelectionModel().getSelectedItem() == "Inglés"){
+                // Set stage title
+                primaryStage.setTitle("SMART MAP - Home Page");
+                // Create the HomePage Page grid pane
+                GridPane homePageGridPane = HomePage.createHomePageGridPane();
+                // Set background colour
+                homePageGridPane.setStyle("-fx-background-color: #4aa4ef");
+                // Add UI controls to the HomePage form grid pane
+                HomePage.addUIControlsHomePage(homePageGridPane, primaryStage);
+                // Set the scene in HomePage
+                Scene HomePageScene = new Scene(homePageGridPane, 800, 500);
+                // Display HomePage stage
+                primaryStage.setScene(HomePageScene);
+                primaryStage.show();
+            }
+        });
+
+
         lobitosMapButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

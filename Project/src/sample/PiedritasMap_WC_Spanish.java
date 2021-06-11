@@ -15,10 +15,10 @@ import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class PiedritasMap_WC_Spanish extends Application {
+public abstract class PiedritasMap_WC_Spanish /*extends Application */{
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Mapa dePiedritas");
@@ -35,8 +35,7 @@ public class PiedritasMap_WC_Spanish extends Application {
         primaryStage.setScene(PiedritasWCScene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
     // Create Grid Pane for Spanish PiedritasWC

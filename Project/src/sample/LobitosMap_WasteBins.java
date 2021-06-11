@@ -14,10 +14,10 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-public class LobitosMap_WasteBins extends Application {
+public abstract class LobitosMap_WasteBins /*extends Application*/ {
 
     // Start function for quick display
-    @Override
+    /*@Override
     public void start(Stage primaryStage) {
         // Set stage title
         primaryStage.setTitle("SMART MAP - Lobitos Map");
@@ -34,10 +34,7 @@ public class LobitosMap_WasteBins extends Application {
         primaryStage.setScene(LobitosWastBinsScene);
         primaryStage.show();
     }
-
-
-
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) { launch(args); }*/
 
 
     // Create Grid Pane for LobitosWasteBins
