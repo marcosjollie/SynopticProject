@@ -66,12 +66,12 @@ public class PiedritasMap_WC extends Application {
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         piedritasWCGridPane.add(wcButton, 0, 0);
-        piedritasWCGridPane.setMargin(wcButton, new Insets(0, 60,0,-60));
+        GridPane.setMargin(wcButton, new Insets(0, 60,0,-60));
         // Add Toilets Label
         Label toiletsLabel = new Label("Public toilets");
         toiletsLabel.setFont(Font.font("Arial", 14));
         piedritasWCGridPane.add(toiletsLabel, 1,0);
-        piedritasWCGridPane.setMargin(toiletsLabel, new Insets(0, 60,0,-55));
+        GridPane.setMargin(toiletsLabel, new Insets(0, 60,0,-55));
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -81,12 +81,12 @@ public class PiedritasMap_WC extends Application {
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         piedritasWCGridPane.add(recyclingButton, 0, 1);
-        piedritasWCGridPane.setMargin(recyclingButton, new Insets(0, 60,0,-60));
+        GridPane.setMargin(recyclingButton, new Insets(0, 60,0,-60));
         // Add Recycling Label
         Label recyclingLabel = new Label("Recycling Points");
         recyclingLabel.setFont(Font.font("Arial", 14));
         piedritasWCGridPane.add(recyclingLabel, 1,1);
-        piedritasWCGridPane.setMargin(recyclingLabel, new Insets(0, 60,0,-55));
+        GridPane.setMargin(recyclingLabel, new Insets(0, 60,0,-55));
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -96,12 +96,12 @@ public class PiedritasMap_WC extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         piedritasWCGridPane.add(wasteBinsButton, 0, 2);
-        piedritasWCGridPane.setMargin(wasteBinsButton, new Insets(0, 60,280,-60));
+        GridPane.setMargin(wasteBinsButton, new Insets(0, 60,280,-60));
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         piedritasWCGridPane.add(wasteBinsLabel, 1,2);
-        piedritasWCGridPane.setMargin(wasteBinsLabel, new Insets(0, 60,280,-55));
+        GridPane.setMargin(wasteBinsLabel, new Insets(0, 60,280,-55));
 
         // Add Back Button
         Button backButton = new Button("Back");
@@ -109,8 +109,8 @@ public class PiedritasMap_WC extends Application {
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
         piedritasWCGridPane.add(backButton, 0, 10, 1, 1);
-        piedritasWCGridPane.setHalignment(backButton, HPos.LEFT);
-        piedritasWCGridPane.setMargin(backButton, new Insets(0, 20,-135,-20));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(0, 20,-135,-20));
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Report Issue");
@@ -118,8 +118,8 @@ public class PiedritasMap_WC extends Application {
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         piedritasWCGridPane.add(reportIssueButton, 1, 10, 1, 1);
-        piedritasWCGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        piedritasWCGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
+        GridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        GridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
         // Add WC Point Buttons
@@ -130,7 +130,7 @@ public class PiedritasMap_WC extends Application {
         wcButton1.setPrefSize(25,25);
         wcButton1.setDefaultButton(true);
         piedritasWCGridPane.add(wcButton1, 0, 4);
-        piedritasWCGridPane.setMargin(wcButton1, new Insets(-25, -328,25,328));
+        GridPane.setMargin(wcButton1, new Insets(-25, -328,25,328));
 
         Button wcButton2 = new Button();
         wcButton2.setBackground(HomePage.WCImage);
@@ -139,7 +139,7 @@ public class PiedritasMap_WC extends Application {
         wcButton2.setPrefSize(25,25);
         wcButton2.setDefaultButton(true);
         piedritasWCGridPane.add(wcButton2, 1, 4);
-        piedritasWCGridPane.setMargin(wcButton2, new Insets(-260, -730,260,730));
+        GridPane.setMargin(wcButton2, new Insets(-260, -730,260,730));
 
 
         // Set pop-up information for each point

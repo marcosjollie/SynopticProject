@@ -66,12 +66,12 @@ public class LobitosMap_Recylcing extends Application {
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         lobitosRecycleGridPane.add(wcButton, 0, 0);
-        lobitosRecycleGridPane.setMargin(wcButton, new Insets(20, 35,0,-35));
+        GridPane.setMargin(wcButton, new Insets(20, 35,0,-35));
         // Add WC Label
         Label toiletsLabel = new Label("Public toilets");
         toiletsLabel.setFont(Font.font("Arial", 14));
         lobitosRecycleGridPane.add(toiletsLabel, 1,0);
-        lobitosRecycleGridPane.setMargin(toiletsLabel, new Insets(20, 35,0,-30));
+        GridPane.setMargin(toiletsLabel, new Insets(20, 35,0,-30));
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -81,12 +81,12 @@ public class LobitosMap_Recylcing extends Application {
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         lobitosRecycleGridPane.add(recyclingButton, 0, 1);
-        lobitosRecycleGridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
+        GridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
         // Add Recycling Label
         Label recyclingLabel = new Label("Recycling Points");
         recyclingLabel.setFont(Font.font("Arial", 14));
         lobitosRecycleGridPane.add(recyclingLabel, 1,1);
-        lobitosRecycleGridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
+        GridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -96,12 +96,12 @@ public class LobitosMap_Recylcing extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         lobitosRecycleGridPane.add(wasteBinsButton, 0, 2);
-        lobitosRecycleGridPane.setMargin(wasteBinsButton, new Insets(0, 35,300,-35));
+        GridPane.setMargin(wasteBinsButton, new Insets(0, 35,300,-35));
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         lobitosRecycleGridPane.add(wasteBinsLabel, 1,2);
-        lobitosRecycleGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,300,-30));
+        GridPane.setMargin(wasteBinsLabel, new Insets(0, 35,300,-30));
 
         // Add Back Button
         Button backButton = new Button("Back");
@@ -109,8 +109,8 @@ public class LobitosMap_Recylcing extends Application {
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
         lobitosRecycleGridPane.add(backButton, 0, 10, 1, 1);
-        lobitosRecycleGridPane.setHalignment(backButton, HPos.LEFT);
-        lobitosRecycleGridPane.setMargin(backButton, new Insets(0, -5,-95,5));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(0, -5,-95,5));
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Report Issue");
@@ -118,8 +118,8 @@ public class LobitosMap_Recylcing extends Application {
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         lobitosRecycleGridPane.add(reportIssueButton, 1, 10, 1, 1);
-        lobitosRecycleGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        lobitosRecycleGridPane.setMargin(reportIssueButton, new Insets(0, -20,-95, 20));
+        GridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        GridPane.setMargin(reportIssueButton, new Insets(0, -20,-95, 20));
 
 
 
@@ -131,7 +131,7 @@ public class LobitosMap_Recylcing extends Application {
         recyleButton1.setPrefSize(25,25);
         recyleButton1.setDefaultButton(true);
         lobitosRecycleGridPane.add(recyleButton1, 0, 4);
-        lobitosRecycleGridPane.setMargin(recyleButton1, new Insets(-65, -245,65,245));
+        GridPane.setMargin(recyleButton1, new Insets(-65, -245,65,245));
 
         Button recyleButton2 = new Button();
         recyleButton2.setBackground(HomePage.RecyclingImage);
@@ -140,7 +140,7 @@ public class LobitosMap_Recylcing extends Application {
         recyleButton2.setPrefSize(25,25);
         recyleButton2.setDefaultButton(true);
         lobitosRecycleGridPane.add(recyleButton2, 1, 4);
-        lobitosRecycleGridPane.setMargin(recyleButton2, new Insets(-52, -350,52,350));
+        GridPane.setMargin(recyleButton2, new Insets(-52, -350,52,350));
 
         Button recyleButton3 = new Button();
         recyleButton3.setBackground(HomePage.RecyclingImage);
@@ -149,7 +149,7 @@ public class LobitosMap_Recylcing extends Application {
         recyleButton3.setPrefSize(25,25);
         recyleButton3.setDefaultButton(true);
         lobitosRecycleGridPane.add(recyleButton3, 2, 4);
-        lobitosRecycleGridPane.setMargin(recyleButton3, new Insets(25, 90,-25,-90));
+        GridPane.setMargin(recyleButton3, new Insets(25, 90,-25,-90));
 
 
 

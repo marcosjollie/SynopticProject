@@ -68,12 +68,12 @@ public class LobitosMap_WasteBins extends Application {
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wcButton, 0, 0);
-        lobitosWasteBinsGridPane.setMargin(wcButton, new Insets(20, 35,0,-35));
+        GridPane.setMargin(wcButton, new Insets(20, 35,0,-35));
         // Add WC Label
         Label toiletsLabel = new Label("Public toilets");
         toiletsLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(toiletsLabel, 1,0);
-        lobitosWasteBinsGridPane.setMargin(toiletsLabel, new Insets(20, 35,0,-30));
+        GridPane.setMargin(toiletsLabel, new Insets(20, 35,0,-30));
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -83,12 +83,12 @@ public class LobitosMap_WasteBins extends Application {
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(recyclingButton, 0, 1);
-        lobitosWasteBinsGridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
+        GridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
         // Add Recycling Label
         Label recyclingLabel = new Label("Recycling Points");
         recyclingLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(recyclingLabel, 1,1);
-        lobitosWasteBinsGridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
+        GridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -98,12 +98,12 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton, 0, 2);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton, new Insets(0, 35,300,-35));
+        GridPane.setMargin(wasteBinsButton, new Insets(0, 35,300,-35));
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Waste bins");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         lobitosWasteBinsGridPane.add(wasteBinsLabel, 1,2);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,300,-30));
+        GridPane.setMargin(wasteBinsLabel, new Insets(0, 35,300,-30));
 
         // Add Back Button
         Button backButton = new Button("Back");
@@ -111,8 +111,8 @@ public class LobitosMap_WasteBins extends Application {
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(backButton, 0, 10, 1, 1);
-        lobitosWasteBinsGridPane.setHalignment(backButton, HPos.LEFT);
-        lobitosWasteBinsGridPane.setMargin(backButton, new Insets(0, -5,-95,5));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(0, -5,-95,5));
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Report Issue");
@@ -120,8 +120,8 @@ public class LobitosMap_WasteBins extends Application {
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(reportIssueButton, 1, 10, 1, 1);
-        lobitosWasteBinsGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        lobitosWasteBinsGridPane.setMargin(reportIssueButton, new Insets(0, -95,-95, 95));
+        GridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        GridPane.setMargin(reportIssueButton, new Insets(0, -95,-95, 95));
 
 
         // Add Waste Bins Point Buttons
@@ -132,7 +132,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton1.setPrefSize(25,25);
         wasteBinsButton1.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton1, 0, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton1, new Insets(35, 68,-35,-68));
+        GridPane.setMargin(wasteBinsButton1, new Insets(35, 68,-35,-68));
 
         Button wasteBinsButton2 = new Button();
         wasteBinsButton2.setBackground(HomePage.BinImage);
@@ -141,7 +141,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton2.setPrefSize(25,25);
         wasteBinsButton2.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton2, 1, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton2, new Insets(-5, 50,5,-50));
+        GridPane.setMargin(wasteBinsButton2, new Insets(-5, 50,5,-50));
 
         Button wasteBinsButton3 = new Button();
         wasteBinsButton3.setBackground(HomePage.BinImage);
@@ -150,7 +150,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton3.setPrefSize(25,25);
         wasteBinsButton3.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton3, 2, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton3, new Insets(-70, 520,70,-520));
+        GridPane.setMargin(wasteBinsButton3, new Insets(-70, 520,70,-520));
 
         Button wasteBinsButton4 = new Button();
         wasteBinsButton4.setBackground(HomePage.BinImage);
@@ -159,7 +159,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton4.setPrefSize(25,25);
         wasteBinsButton4.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton4, 3, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton4, new Insets(-60, 450,60,-450));
+        GridPane.setMargin(wasteBinsButton4, new Insets(-60, 450,60,-450));
 
         Button wasteBinsButton5 = new Button();
         wasteBinsButton5.setBackground(HomePage.BinImage);
@@ -168,7 +168,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton5.setPrefSize(25,25);
         wasteBinsButton5.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton5, 4, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton5, new Insets(25, 455,-25,-455));
+        GridPane.setMargin(wasteBinsButton5, new Insets(25, 455,-25,-455));
 
         Button wasteBinsButton6 = new Button();
         wasteBinsButton6.setBackground(HomePage.BinImage);
@@ -177,7 +177,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton6.setPrefSize(25,25);
         wasteBinsButton6.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton6, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton6, new Insets(-65, 370,65,-370));
+        GridPane.setMargin(wasteBinsButton6, new Insets(-65, 370,65,-370));
 
         Button wasteBinsButton7 = new Button();
         wasteBinsButton7.setBackground(HomePage.BinImage);
@@ -186,7 +186,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton7.setPrefSize(25,25);
         wasteBinsButton7.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton7, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton7, new Insets(-18, 275,18,-275));
+        GridPane.setMargin(wasteBinsButton7, new Insets(-18, 275,18,-275));
 
         Button wasteBinsButton8 = new Button();
         wasteBinsButton8.setBackground(HomePage.BinImage);
@@ -195,7 +195,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton8.setPrefSize(25,25);
         wasteBinsButton8.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton8, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton8, new Insets(-200, 300,200,-300));
+        GridPane.setMargin(wasteBinsButton8, new Insets(-200, 300,200,-300));
 
         Button wasteBinsButton9 = new Button();
         wasteBinsButton9.setBackground(HomePage.BinImage);
@@ -204,7 +204,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton9.setPrefSize(25,25);
         wasteBinsButton9.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton9, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton9, new Insets(-160, 295,160,-295));
+        GridPane.setMargin(wasteBinsButton9, new Insets(-160, 295,160,-295));
 
         Button wasteBinsButton10 = new Button();
         wasteBinsButton10.setBackground(HomePage.BinImage);
@@ -213,7 +213,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton10.setPrefSize(25,25);
         wasteBinsButton10.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton10, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton10, new Insets(-145, 240,145,-240));
+        GridPane.setMargin(wasteBinsButton10, new Insets(-145, 240,145,-240));
 
         Button wasteBinsButton11 = new Button();
         wasteBinsButton11.setBackground(HomePage.BinImage);
@@ -222,7 +222,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton11.setPrefSize(25,25);
         wasteBinsButton11.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton11, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton11, new Insets(-25, 100,25,-100));
+        GridPane.setMargin(wasteBinsButton11, new Insets(-25, 100,25,-100));
 
         Button wasteBinsButton12 = new Button();
         wasteBinsButton12.setBackground(HomePage.BinImage);
@@ -231,7 +231,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton12.setPrefSize(25,25);
         wasteBinsButton12.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton12, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton12, new Insets(30, 100,-30,-100));
+        GridPane.setMargin(wasteBinsButton12, new Insets(30, 100,-30,-100));
 
         Button wasteBinsButton13 = new Button();
         wasteBinsButton13.setBackground(HomePage.BinImage);
@@ -240,7 +240,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton13.setPrefSize(25,25);
         wasteBinsButton13.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton13, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton13, new Insets(-370, 155,370,-155));
+        GridPane.setMargin(wasteBinsButton13, new Insets(-370, 155,370,-155));
 
         Button wasteBinsButton14 = new Button();
         wasteBinsButton14.setBackground(HomePage.BinImage);
@@ -249,7 +249,7 @@ public class LobitosMap_WasteBins extends Application {
         wasteBinsButton14.setPrefSize(25,25);
         wasteBinsButton14.setDefaultButton(true);
         lobitosWasteBinsGridPane.add(wasteBinsButton14, 5, 4);
-        lobitosWasteBinsGridPane.setMargin(wasteBinsButton14, new Insets(-320, 95,320,-95));
+        GridPane.setMargin(wasteBinsButton14, new Insets(-320, 95,320,-95));
 
 
 

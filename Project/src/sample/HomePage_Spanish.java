@@ -66,15 +66,15 @@ public class HomePage_Spanish extends Application {
         Label FxAppHeader = new Label("SmartMap");
         FxAppHeader.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         homePageGridPane.add(FxAppHeader, 0, 0, 2, 1);
-        homePageGridPane.setHalignment(FxAppHeader, HPos.CENTER);
-        homePageGridPane.setMargin(FxAppHeader, new Insets(20, 0, 20, 0));
+        GridPane.setHalignment(FxAppHeader, HPos.CENTER);
+        GridPane.setMargin(FxAppHeader, new Insets(20, 0, 20, 0));
 
         // Add Welcome label
         Label welcomeLabel = new Label("Bienvenido");
         welcomeLabel.setFont(Font.font("Arial", 24));
         homePageGridPane.add(welcomeLabel, 0, 1, 2, 1);
-        homePageGridPane.setHalignment(welcomeLabel, HPos.CENTER);
-        homePageGridPane.setMargin(welcomeLabel, new Insets(20, 0, 20, 0));
+        GridPane.setHalignment(welcomeLabel, HPos.CENTER);
+        GridPane.setMargin(welcomeLabel, new Insets(20, 0, 20, 0));
 
 
         // Add Lobitos map Button
@@ -84,8 +84,8 @@ public class HomePage_Spanish extends Application {
         lobitosMapButton.setPrefWidth(150);
         lobitosMapButton.setDefaultButton(true);
         homePageGridPane.add(lobitosMapButton, 0, 2, 2, 1);
-        homePageGridPane.setHalignment(lobitosMapButton, HPos.CENTER);
-        homePageGridPane.setMargin(lobitosMapButton, new Insets(0, 0, 0, 0));
+        GridPane.setHalignment(lobitosMapButton, HPos.CENTER);
+        GridPane.setMargin(lobitosMapButton, new Insets(0, 0, 0, 0));
 
         // Add Piedritas map Button
         Button piedritasMapButton = new Button("Mapa de Piedritas");
@@ -94,16 +94,16 @@ public class HomePage_Spanish extends Application {
         piedritasMapButton.setPrefWidth(150);
         piedritasMapButton.setDefaultButton(true);
         homePageGridPane.add(piedritasMapButton, 0, 3, 2, 1);
-        homePageGridPane.setHalignment(piedritasMapButton, HPos.CENTER);
-        homePageGridPane.setMargin(piedritasMapButton, new Insets(0, 0, 0, 0));
+        GridPane.setHalignment(piedritasMapButton, HPos.CENTER);
+        GridPane.setMargin(piedritasMapButton, new Insets(0, 0, 0, 0));
 
 
         // Add Language Label
         Label languageLabel = new Label("Idioma: ");
         languageLabel.setFont(Font.font("Arial", 14));
         homePageGridPane.add(languageLabel, 0,6);
-        homePageGridPane.setHalignment(languageLabel, HPos.LEFT);
-        homePageGridPane.setMargin(languageLabel, new Insets(0, 0,-190,0));
+        GridPane.setHalignment(languageLabel, HPos.LEFT);
+        GridPane.setMargin(languageLabel, new Insets(0, 0,-190,0));
 
         // Add Laguage Box
         ChoiceBox languageBox = new ChoiceBox();
@@ -112,7 +112,7 @@ public class HomePage_Spanish extends Application {
         languageBox.getItems().add("Inglés");
         languageBox.getItems().add("Español");
         homePageGridPane.add(languageBox, 1, 6, 2, 1);
-        homePageGridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
+        GridPane.setMargin(languageBox, new Insets(0, 0,-190,-15));
 
 
 

@@ -65,12 +65,12 @@ public class LobitosMap_Spanish extends Application {
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         lobitosMapGridPane.add(wcButton, 0, 0);
-        lobitosMapGridPane.setMargin(wcButton, new Insets(0, 35,0,-35));
+        GridPane.setMargin(wcButton, new Insets(0, 35,0,-35));
         // Add Toilets Label
         Label toiletsLabel = new Label("Baños Públicos");
         toiletsLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(toiletsLabel, 1,0);
-        lobitosMapGridPane.setMargin(toiletsLabel, new Insets(0, 35,0,-30));
+        GridPane.setMargin(toiletsLabel, new Insets(0, 35,0,-30));
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -80,12 +80,12 @@ public class LobitosMap_Spanish extends Application {
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         lobitosMapGridPane.add(recyclingButton, 0, 1);
-        lobitosMapGridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
+        GridPane.setMargin(recyclingButton, new Insets(0, 35,0,-35));
         // Add Recycling Label
         Label recyclingLabel = new Label("Puntos de Reciclaje");
         recyclingLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(recyclingLabel, 1,1);
-        lobitosMapGridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
+        GridPane.setMargin(recyclingLabel, new Insets(0, 35,0,-30));
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -95,12 +95,12 @@ public class LobitosMap_Spanish extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         lobitosMapGridPane.add(wasteBinsButton, 0, 2);
-        lobitosMapGridPane.setMargin(wasteBinsButton, new Insets(0, 35,305,-35));
+        GridPane.setMargin(wasteBinsButton, new Insets(0, 35,305,-35));
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Cubos de Basura");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         lobitosMapGridPane.add(wasteBinsLabel, 1,2);
-        lobitosMapGridPane.setMargin(wasteBinsLabel, new Insets(0, 35,305,-30));
+        GridPane.setMargin(wasteBinsLabel, new Insets(0, 35,305,-30));
 
         // Add Back Button
         Button backButton = new Button("Atras");
@@ -108,8 +108,8 @@ public class LobitosMap_Spanish extends Application {
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
         lobitosMapGridPane.add(backButton, 0, 10, 1, 1);
-        lobitosMapGridPane.setHalignment(backButton, HPos.LEFT);
-        lobitosMapGridPane.setMargin(backButton, new Insets(0, -5,-135,5));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(0, -5,-135,5));
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Reportar Problema");
@@ -117,8 +117,8 @@ public class LobitosMap_Spanish extends Application {
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         lobitosMapGridPane.add(reportIssueButton, 1, 10, 1, 1);
-        lobitosMapGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        lobitosMapGridPane.setMargin(reportIssueButton, new Insets(0, 5,-135, -5));
+        GridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        GridPane.setMargin(reportIssueButton, new Insets(0, 5,-135, -5));
 
 
         // Set action for pressed buttons

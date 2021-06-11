@@ -62,15 +62,15 @@ public class Report_Spanish extends Application {
         Label headerLabel = new Label("Formulario de Problema");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         reportGridPane.add(headerLabel, 0,0,2,1);
-        reportGridPane.setHalignment(headerLabel, HPos.CENTER);
-        reportGridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
+        GridPane.setHalignment(headerLabel, HPos.CENTER);
+        GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
         // Add Issue Type Label
         Label issueTypeLabel = new Label("Tipo de Problema: ");
         issueTypeLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(issueTypeLabel, 0,1);
-        reportGridPane.setHalignment(issueTypeLabel, HPos.LEFT);
-        reportGridPane.setMargin(issueTypeLabel, new Insets(0, 0,0,0));
+        GridPane.setHalignment(issueTypeLabel, HPos.LEFT);
+        GridPane.setMargin(issueTypeLabel, new Insets(0, 0,0,0));
         // Add Issue Type Choice Box
         ChoiceBox issueTypeBox = new ChoiceBox();
         issueTypeBox.setMaxSize(200,30);
@@ -79,59 +79,59 @@ public class Report_Spanish extends Application {
         issueTypeBox.getItems().add("Exceso de basura");
         issueTypeBox.getItems().add("Otro");
         reportGridPane.add(issueTypeBox,1,1);
-        reportGridPane.setMargin(issueTypeBox, new Insets(0, 0,0,-15));
+        GridPane.setMargin(issueTypeBox, new Insets(0, 0,0,-15));
 
         // Add Location Label
         Label locationLabel = new Label("Ubicación: ");
         locationLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(locationLabel, 0,2);
-        reportGridPane.setHalignment(locationLabel, HPos.LEFT);
-        reportGridPane.setMargin(locationLabel, new Insets(0, 0,0,0));
+        GridPane.setHalignment(locationLabel, HPos.LEFT);
+        GridPane.setMargin(locationLabel, new Insets(0, 0,0,0));
         // Add Location Field
         TextField locationField = new TextField();
         locationField.setPromptText("Escriba la ubicación");
         locationField.setMaxSize(200,30);
         reportGridPane.add(locationField, 1,2);
-        reportGridPane.setMargin(locationField, new Insets(0, 0,0,-15));
+        GridPane.setMargin(locationField, new Insets(0, 0,0,-15));
 
         // Add Date Label
         Label dateLabel = new Label("Fecha: ");
         dateLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(dateLabel, 0,3);
-        reportGridPane.setHalignment(dateLabel, HPos.LEFT);
-        reportGridPane.setMargin(dateLabel, new Insets(0, 0,0,0));
+        GridPane.setHalignment(dateLabel, HPos.LEFT);
+        GridPane.setMargin(dateLabel, new Insets(0, 0,0,0));
         // Add Date Field
         TextField dateField = new TextField();
         dateField.setPromptText("dd/mm/aaaa");
         dateField.setMaxSize(200,30);
         reportGridPane.add(dateField, 1,3);
-        reportGridPane.setMargin(dateField, new Insets(0, 0,0,-15));
+        GridPane.setMargin(dateField, new Insets(0, 0,0,-15));
 
         // Add Description Label
         Label descriptionLabel = new Label("Descripción: ");
         descriptionLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(descriptionLabel, 0,4);
-        reportGridPane.setHalignment(descriptionLabel, HPos.LEFT);
-        reportGridPane.setMargin(descriptionLabel, new Insets(0, 0,0,0));
+        GridPane.setHalignment(descriptionLabel, HPos.LEFT);
+        GridPane.setMargin(descriptionLabel, new Insets(0, 0,0,0));
         // Add Surname Field
         TextField descriptionField = new TextField();
         descriptionField.setPromptText("Escriba la descripción");
         descriptionField.setMaxSize(200,30);
         reportGridPane.add(descriptionField, 1,4);
-        reportGridPane.setMargin(descriptionField, new Insets(0, 0,0,-15));
+        GridPane.setMargin(descriptionField, new Insets(0, 0,0,-15));
 
         // Add Email Label
         Label emailLabel = new Label("Correo electronico (opcional): ");
         emailLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(emailLabel, 0, 5);
-        reportGridPane.setHalignment(emailLabel, HPos.LEFT);
-        reportGridPane.setMargin(emailLabel, new Insets(0, 0,0,0));
+        GridPane.setHalignment(emailLabel, HPos.LEFT);
+        GridPane.setMargin(emailLabel, new Insets(0, 0,0,0));
         // Add Email Text Field
         TextField emailField = new TextField();
         emailField.setPromptText("Correo electronico (opcional)");
         emailField.setMaxSize(200,30);
         reportGridPane.add(emailField, 1, 5);
-        reportGridPane.setMargin(emailField, new Insets(0, 0,0,-15));
+        GridPane.setMargin(emailField, new Insets(0, 0,0,-15));
 
 
         // Add Submit Button
@@ -140,16 +140,16 @@ public class Report_Spanish extends Application {
         submitButton.setDefaultButton(true);
         submitButton.setPrefWidth(100);
         reportGridPane.add(submitButton, 0, 6, 2, 1);
-        reportGridPane.setHalignment(submitButton, HPos.CENTER);
-        reportGridPane.setMargin(submitButton, new Insets(20, 0,20,0));
+        GridPane.setHalignment(submitButton, HPos.CENTER);
+        GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
         // Add Back Button
         Button backButton = new Button("Atras");
         backButton.setPrefHeight(25);
         backButton.setDefaultButton(true);
         backButton.setPrefWidth(100);
         reportGridPane.add(backButton, 0, 7, 1, 1);
-        reportGridPane.setHalignment(backButton, HPos.LEFT);
-        reportGridPane.setMargin(backButton, new Insets(20, 0,20,0));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(20, 0,20,0));
 
 
         // Set action for pressed buttons

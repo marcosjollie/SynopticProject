@@ -66,12 +66,12 @@ public class PiedritasMap_Spanish extends Application {
         wcButton.setPrefSize(25,25);
         wcButton.setDefaultButton(true);
         piedritasMapGridPane.add(wcButton, 0, 0);
-        piedritasMapGridPane.setMargin(wcButton, new Insets(0, 60,0,-60));
+        GridPane.setMargin(wcButton, new Insets(0, 60,0,-60));
         // Add Toilets Label
         Label toiletsLabel = new Label("Baños Públicos");
         toiletsLabel.setFont(Font.font("Arial", 14));
         piedritasMapGridPane.add(toiletsLabel, 1,0);
-        piedritasMapGridPane.setMargin(toiletsLabel, new Insets(0, 60,0,-55));
+        GridPane.setMargin(toiletsLabel, new Insets(0, 60,0,-55));
 
         // Add Recycling Button
         Button recyclingButton = new Button();
@@ -81,12 +81,12 @@ public class PiedritasMap_Spanish extends Application {
         recyclingButton.setPrefSize(25,25);
         recyclingButton.setDefaultButton(true);
         piedritasMapGridPane.add(recyclingButton, 0, 1);
-        piedritasMapGridPane.setMargin(recyclingButton, new Insets(0, 60,0,-60));
+        GridPane.setMargin(recyclingButton, new Insets(0, 60,0,-60));
         // Add Recycling Label
         Label recyclingLabel = new Label("Puntos de Reciclaje");
         recyclingLabel.setFont(Font.font("Arial", 14));
         piedritasMapGridPane.add(recyclingLabel, 1,1);
-        piedritasMapGridPane.setMargin(recyclingLabel, new Insets(0, 60,0,-55));
+        GridPane.setMargin(recyclingLabel, new Insets(0, 60,0,-55));
 
         // Add Waste Bins Button
         Button wasteBinsButton = new Button();
@@ -96,12 +96,12 @@ public class PiedritasMap_Spanish extends Application {
         wasteBinsButton.setPrefSize(25,25);
         wasteBinsButton.setDefaultButton(true);
         piedritasMapGridPane.add(wasteBinsButton, 0, 2);
-        piedritasMapGridPane.setMargin(wasteBinsButton, new Insets(0, 60,305,-60));
+        GridPane.setMargin(wasteBinsButton, new Insets(0, 60,305,-60));
         // Add Waste Bins Label
         Label wasteBinsLabel = new Label("Cubos de Basura");
         wasteBinsLabel.setFont(Font.font("Arial", 14));
         piedritasMapGridPane.add(wasteBinsLabel, 1,2);
-        piedritasMapGridPane.setMargin(wasteBinsLabel, new Insets(0, 60,305,-55));
+        GridPane.setMargin(wasteBinsLabel, new Insets(0, 60,305,-55));
 
 
         // Add Back Button
@@ -110,8 +110,8 @@ public class PiedritasMap_Spanish extends Application {
         backButton.setPrefSize(70,20);
         backButton.setDefaultButton(true);
         piedritasMapGridPane.add(backButton, 0, 10, 1, 1);
-        piedritasMapGridPane.setHalignment(backButton, HPos.LEFT);
-        piedritasMapGridPane.setMargin(backButton, new Insets(0, 20,-135,-20));
+        GridPane.setHalignment(backButton, HPos.LEFT);
+        GridPane.setMargin(backButton, new Insets(0, 20,-135,-20));
 
         // Add Report Issue Button
         Button reportIssueButton = new Button("Reportar Problema");
@@ -119,8 +119,8 @@ public class PiedritasMap_Spanish extends Application {
         reportIssueButton.setPrefSize(100,20);
         reportIssueButton.setDefaultButton(true);
         piedritasMapGridPane.add(reportIssueButton, 1, 10, 1, 1);
-        piedritasMapGridPane.setHalignment(reportIssueButton, HPos.RIGHT);
-        piedritasMapGridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
+        GridPane.setHalignment(reportIssueButton, HPos.RIGHT);
+        GridPane.setMargin(reportIssueButton, new Insets(0, -20,-135, 20));
 
 
 
