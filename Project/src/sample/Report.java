@@ -118,7 +118,7 @@ public abstract class Report extends Application {
         GridPane.setMargin(descriptionLabel, new Insets(0, 0,0,0));
         // Add Surname Field
         TextField descriptionField = new TextField();
-        descriptionField.setPromptText("Enter surname");
+        descriptionField.setPromptText("Enter Description");
         descriptionField.setMaxSize(200,30);
         reportGridPane.add(descriptionField, 1,4);
         GridPane.setMargin(descriptionField, new Insets(0, 0,0,-15));
@@ -177,13 +177,18 @@ public abstract class Report extends Application {
                 String date_value = dateField.getText();
                 String description_value = descriptionField.getText();
                 String email_value = emailField.getText();
-//                    String activeLevel_value = null;
 
+//                HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
+//                        "Submission Successful!", "Issue report has been sent.");
 
-
+                // Used to test Report page
                 HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
-                        "Submission Successful!", "Issue report has been sent.");
-
+                        "Submission Test!", "Issue report has been sent." +
+                                "\nIssue Type: " + issueType_value +
+                                "\nLocation of Issue: " + location_value +
+                                "\nDate of Issue: " + date_value +
+                                "\nDescription of Issue: " + description_value +
+                                "\nEmail: " + email_value );
 
 
 

@@ -174,14 +174,19 @@ public abstract class Report_Spanish extends Application {
                 String date_value = dateField.getText();
                 String description_value = descriptionField.getText();
                 String email_value = emailField.getText();
-//                    String activeLevel_value = null;
 
 
+//                HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
+//                        "Submission Successful!", "Issue report has been sent.");
 
+                // Used to test Report page
                 HomePage.showAlert(Alert.AlertType.CONFIRMATION, reportGridPane.getScene().getWindow(),
-                        "Formulario enviado !", "Formulario a sido enviado.");
-
-
+                        "Submission Test!", "Issue report has been sent." +
+                                "\nIssue Type: " + issueType_value +
+                                "\nLocation of Issue: " + location_value +
+                                "\nDate of Issue: " + date_value +
+                                "\nDescription of Issue: " + description_value +
+                                "\nEmail: " + email_value );
 
 
             }
