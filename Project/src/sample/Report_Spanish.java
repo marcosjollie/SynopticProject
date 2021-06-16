@@ -121,7 +121,7 @@ public abstract class Report_Spanish extends Application {
         GridPane.setMargin(descriptionField, new Insets(0, 0,0,-15));
 
         // Add Email Label
-        Label emailLabel = new Label("Correo electronico (opcional): ");
+        Label emailLabel = new Label("Correo electronico: ");
         emailLabel.setFont(Font.font("Arial", 14));
         reportGridPane.add(emailLabel, 0, 5);
         GridPane.setHalignment(emailLabel, HPos.LEFT);
